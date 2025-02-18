@@ -1,0 +1,1150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>Real Python</title>
+  <link href="https://realpython.com/atom.xml" rel="self"/>
+  <link href="https://realpython.com/"/>
+  <updated>2022-11-30T14:00:00+00:00</updated>
+  <id>https://realpython.com/</id>
+  <author>
+    <name>Real Python</name>
+  </author>
+
+  
+    <entry>
+      <title>Advent of Code: Solving Your Puzzles With Python</title>
+      <id>https://realpython.com/python-advent-of-code/</id>
+      <link href="https://realpython.com/python-advent-of-code/"/>
+      <updated>2022-11-30T14:00:00+00:00</updated>
+      <summary>Advent of Code is an online advent calendar that shares new programming puzzles each day from December 1 to the 25. In this tutorial, you&#x27;ll learn why solving programming puzzles can be beneficial and how you can get started with Advent of Code using Python.</summary>
+      <content type="html">
+        &lt;div&gt;&lt;p&gt;Advent of Code is an online Advent calendar where you’ll find new programming puzzles offered each day from December 1 to 25. While you can solve the puzzles at any time, the excitement when new puzzles unlock is really something special. You can participate in Advent of Code in any programming language—including Python!&lt;/p&gt;
+&lt;p&gt;With the help of this tutorial, you’ll be ready to start solving puzzles and earning your first gold stars.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In this tutorial, you’ll learn:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What an &lt;strong&gt;online Advent calendar&lt;/strong&gt; is&lt;/li&gt;
+&lt;li&gt;How solving puzzles can &lt;strong&gt;advance your programming skills&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;How you can &lt;strong&gt;participate&lt;/strong&gt; in Advent of Code&lt;/li&gt;
+&lt;li&gt;How you can &lt;strong&gt;organize your code and tests&lt;/strong&gt; when solving Advent of Code puzzles&lt;/li&gt;
+&lt;li&gt;How &lt;strong&gt;test-driven development&lt;/strong&gt; can be used when solving puzzles&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Advent of Code puzzles are designed to be approachable by anyone with an interest in problem-solving. You don’t need a heavy computer science background to participate. Instead, Advent of Code is a great arena for learning new skills and testing out new features of Python.&lt;/p&gt;
+&lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong markdown=&quot;1&quot;&gt;Source Code:&lt;/strong&gt; &lt;a href=&quot;https://realpython.com/bonus/python-advent-of-code-code/&quot; class=&quot;alert-link&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-python-advent-of-code-code&quot; data-focus=&quot;false&quot; markdown=&quot;1&quot;&gt;Click here to download the free source code&lt;/a&gt; that shows you how to solve Advent of Code puzzles with Python.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;puzzling-in-programming&quot;&gt;Puzzling in Programming?&lt;a class=&quot;headerlink&quot; href=&quot;#puzzling-in-programming&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Working on puzzles may seem like a waste of your available programming time. After all, it seems like you’re not really producing anything useful and you’re not advancing your current projects forward.&lt;/p&gt;
+&lt;p&gt;However, there are several advantages to taking some time off to practice with programming puzzles:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Programming puzzles are usually better specified and more contained than your regular job tasks. They offer you the chance to &lt;strong&gt;practice logical thinking&lt;/strong&gt; on problems that are less complex than the ones you typically need to handle in your day job.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can often challenge yourself with several similar puzzles. This allows you to &lt;strong&gt;build procedural memory&lt;/strong&gt;, much like muscle memory, and get experience with structuring certain kinds of code.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Puzzles are often designed with an eye towards a solution. They allow you to &lt;strong&gt;learn about and apply algorithms&lt;/strong&gt; that are tried and tested and are an important part of any programmer’s toolbox.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For some puzzle solutions, even the greatest supercomputers can be too slow if the algorithm is inefficient. You can &lt;strong&gt;analyze the performance&lt;/strong&gt; of your solution and get experience to help you understand when a straightforward method is fast enough and when a more optimized procedure is necessary.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Most programming languages are well-suited for solving programming puzzles. This gives you a great opportunity to &lt;strong&gt;compare different programming languages&lt;/strong&gt; for different tasks. Puzzles are also a great way of getting to know a new programming language or trying out some of the &lt;a href=&quot;https://realpython.com/python311-new-features/&quot;&gt;newest features&lt;/a&gt; of your favorite language.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On top of all of this, challenging yourself with a programming puzzle is often pretty fun! When you add it all up, setting aside some time for puzzles can be very rewarding.&lt;/p&gt;
+&lt;h2 id=&quot;exploring-options-for-solving-programming-puzzles-online&quot;&gt;Exploring Options for Solving Programming Puzzles Online&lt;a class=&quot;headerlink&quot; href=&quot;#exploring-options-for-solving-programming-puzzles-online&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Luckily, there are many websites where you can find programming puzzles and try to solve them. There are often differences in the kinds of problems these websites present, how you submit your solutions, and what kind of feedback and community the sites can offer. You should therefore take some time to look around and find those that appeal the most to you.&lt;/p&gt;
+&lt;p&gt;In this tutorial, you’ll learn about &lt;a href=&quot;https://adventofcode.com/about&quot;&gt;Advent of Code&lt;/a&gt;, including what kind of puzzles you can find there and which tools and tricks you can employ to solve them. However, there are also other places where you can get started solving programming puzzles:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://exercism.org/&quot;&gt;Exercism&lt;/a&gt; has learning tracks in many different programming languages. Each learning track offers coding challenges, small tutorials about different programming concepts, and mentors who give you feedback on your solutions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://projecteuler.net/&quot;&gt;Project Euler&lt;/a&gt; has been around for a long time. The site offers hundreds of puzzles, usually formulated as math problems. You can solve the problems in any programming language, and once you’ve solved a puzzle, you get access to a community thread where you can discuss your solution with others.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.codewars.com/&quot;&gt;Code Wars&lt;/a&gt; offers tons of coding challenges, which they call &lt;a href=&quot;https://en.wikipedia.org/wiki/Kata&quot;&gt;katas&lt;/a&gt;. You can solve puzzles in many different programming languages with their built-in editor and automated tests. Afterward, you can compare your solutions to others’ and discuss strategies in the forums.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.hackerrank.com/&quot;&gt;HackerRank&lt;/a&gt; has great features if you’re looking for a job. They offer certifications in many different skills, including problem-solving and Python programming, as well as a job board that lets you show off your puzzle-solving skills as part of your job applications.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are many other sites available where you can practice your puzzle-solving skills. In the rest of this tutorial, you’ll focus on what Advent of Code has to offer.&lt;/p&gt;
+&lt;h2 id=&quot;preparing-for-advent-of-code-25-fresh-puzzles-for-christmas&quot;&gt;Preparing for Advent of Code: 25 Fresh Puzzles for Christmas&lt;a class=&quot;headerlink&quot; href=&quot;#preparing-for-advent-of-code-25-fresh-puzzles-for-christmas&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;It’s time for Advent of Code! It was started by &lt;a href=&quot;https://realpython.com/interview-eric-wastl/&quot;&gt;Eric Wastl&lt;/a&gt; in 2015. Since then, a new &lt;strong&gt;Advent calendar&lt;/strong&gt; of twenty-five new programming puzzles has been published every December. The puzzles have gotten more and more popular over the years. &lt;a href=&quot;https://adventofcode.com/2021/stats&quot;&gt;More than 235,000&lt;/a&gt; people have solved at least one of the puzzles from 2021.&lt;/p&gt;
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Traditionally, an &lt;a href=&quot;https://en.wikipedia.org/wiki/Advent_calendar&quot;&gt;Advent calendar&lt;/a&gt; is a calendar used to count the days of &lt;a href=&quot;https://en.wikipedia.org/wiki/Advent&quot;&gt;Advent&lt;/a&gt; while waiting for Christmas. Over the years, Advent calendars have become more commercial and have lost some of their Christian connection.&lt;/p&gt;
+&lt;p&gt;Most Advent calendars start on December 1 and end on December 24, Christmas Eve, or December 25, Christmas Day. Nowadays, there are all kinds of Advent calendars available, including &lt;a href=&quot;https://www.lego.com/en-us/search?q=advent&quot;&gt;LEGO calendars&lt;/a&gt;, &lt;a href=&quot;https://perchs.dk/vare/a-c-perchs-julekalender-2022-peach/?lang=en&quot;&gt;tea calendars&lt;/a&gt;, and &lt;a href=&quot;https://www.elfcosmetics.com/shine-bright-24-day-advent-calendar/70898.html&quot;&gt;cosmetics calendars&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;In traditional Advent calendars, you open one door every day to reveal what’s inside. Advent of Code mimics this by giving you access to one new puzzle each day from December 1 to December 25. For each puzzle you solve, you’ll earn gold stars that are yours to keep.&lt;/p&gt;
+&lt;p&gt;In this section, you’ll get more familiar with Advent of Code and see a glimpse of your first puzzle. &lt;a href=&quot;#solving-advent-of-code-with-python&quot;&gt;Later&lt;/a&gt;, you’ll look at the details of how you can solve these puzzles and practice solving a few of the puzzles yourself.&lt;/p&gt;
+&lt;h3 id=&quot;advent-of-code-puzzles&quot;&gt;Advent of Code Puzzles&lt;a class=&quot;headerlink&quot; href=&quot;#advent-of-code-puzzles&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Advent of Code is an online Advent calendar where a new puzzle is published every day from December 1 to December 25. Each puzzle becomes available at midnight, &lt;a href=&quot;https://www.timeanddate.com/time/zones/et&quot;&gt;US Eastern Time&lt;/a&gt;. An Advent of Code puzzle has a few typical characteristics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each puzzle consists of two parts, but the second part isn’t revealed until you finish the first part.&lt;/li&gt;
+&lt;li&gt;You’ll earn one gold star (⭐) for each part that you finish. This means you can earn two stars per day and fifty stars if you solve all the puzzles for one year.&lt;/li&gt;
+&lt;li&gt;The puzzle is the same for everyone, but you need to solve it based on personalized input that you get from the Advent of Code site. This means that your answer to a puzzle will be different from someone else’s, even if you use the same code to calculate it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can participate in a &lt;a href=&quot;https://adventofcode.com/leaderboard&quot;&gt;global race&lt;/a&gt; to be the first to solve each puzzle. However, this is usually pretty crowded with highly skilled, competitive programmers. Advent of Code is probably going to &lt;a href=&quot;https://jeroenheijmans.github.io/advent-of-code-surveys/&quot;&gt;be more fun&lt;/a&gt; if you use it as practice for yourself or if you challenge your friends and coworkers to a small, friendly competition.&lt;/p&gt;
+&lt;/div&gt;&lt;h2&gt;&lt;a href=&quot;https://realpython.com/python-advent-of-code/?utm_source=realpython&amp;utm_medium=rss&quot;&gt;Read the full article at https://realpython.com/python-advent-of-code/ »&lt;/a&gt;&lt;/h2&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Using Python&#x27;s pathlib Module</title>
+      <id>https://realpython.com/courses/pathlib-python/</id>
+      <link href="https://realpython.com/courses/pathlib-python/"/>
+      <updated>2022-11-29T14:00:00+00:00</updated>
+      <summary>In this video course, you&#x27;ll learn how to effectively work with file system paths in Python 3 using the pathlib module in the standard library.</summary>
+      <content type="html">
+        &lt;p&gt;Have you struggled with &lt;strong&gt;file path handling&lt;/strong&gt; in Python? With the &lt;strong&gt;&lt;code&gt;pathlib&lt;/code&gt;&lt;/strong&gt; module, the struggle is now over! You no longer need to scratch your head over code like this:&lt;/p&gt;
+&lt;div class=&quot;highlight python repl&quot;&gt;&lt;span class=&quot;repl-toggle&quot; title=&quot;Toggle REPL prompts and output&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rsplit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;maxsplit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And you don&amp;rsquo;t have to cringe at the verbosity of something like this:&lt;/p&gt;
+&lt;div class=&quot;highlight python repl&quot;&gt;&lt;span class=&quot;repl-toggle&quot; title=&quot;Toggle REPL prompts and output&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isfile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expanduser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;~&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;realpython.txt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;In this video course, you&amp;rsquo;ll learn how to:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Work with &lt;strong&gt;file paths&lt;/strong&gt; in Python&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Read&lt;/strong&gt; and &lt;strong&gt;write&lt;/strong&gt; files in new ways&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Manipulate&lt;/strong&gt; paths and the underlying file system&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;List&lt;/strong&gt; files and &lt;strong&gt;iterate&lt;/strong&gt; over them&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Using the &lt;code&gt;pathlib&lt;/code&gt; module, the two examples above can be rewritten using elegant, readable, and Pythonic code:&lt;/p&gt;
+&lt;div class=&quot;highlight python repl&quot;&gt;&lt;span class=&quot;repl-toggle&quot; title=&quot;Toggle REPL prompts and output&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pathlib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;realpython.txt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;That&amp;rsquo;s what you&amp;rsquo;ll master in this video course!&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>How to Get a List of All Files in a Directory With Python</title>
+      <id>https://realpython.com/get-all-files-in-directory-python/</id>
+      <link href="https://realpython.com/get-all-files-in-directory-python/"/>
+      <updated>2022-11-28T14:00:00+00:00</updated>
+      <summary>In this tutorial, you&#x27;ll be examining a couple of methods to get a list of files and folders in a directory with Python. You&#x27;ll also use both methods to recursively list directory contents. Finally, you&#x27;ll examine a situation that pits one method against the other.</summary>
+      <content type="html">
+        &lt;div&gt;&lt;p&gt;Getting a &lt;a href=&quot;https://realpython.com/python-lists-tuples/&quot;&gt;list&lt;/a&gt; of all the &lt;a href=&quot;https://en.wikipedia.org/wiki/Computer_file&quot;&gt;files&lt;/a&gt; and folders in a &lt;a href=&quot;https://en.wikipedia.org/wiki/Directory_(computing)&quot;&gt;directory&lt;/a&gt; is a natural first step for many &lt;strong&gt;file-related operations&lt;/strong&gt; in Python. When looking into it, though, you may be surprised to find various ways to go about it.&lt;/p&gt;
+&lt;p&gt;When you’re faced with many ways of doing something, it can be a good indication that there’s no one-size-fits-all solution to your problems. Most likely, every solution will have its own advantages and trade-offs. This is the case when it comes to getting a list of the contents of a directory in Python.&lt;/p&gt;
+&lt;p&gt;In this tutorial, you’ll be focusing on the most general-purpose techniques in the &lt;a href=&quot;https://realpython.com/python-pathlib/&quot;&gt;&lt;code&gt;pathlib&lt;/code&gt; module&lt;/a&gt; to list items in a directory, but you’ll also learn a bit about some alternative tools.&lt;/p&gt;
+&lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong markdown=&quot;1&quot;&gt;Source Code:&lt;/strong&gt; &lt;a href=&quot;https://realpython.com/bonus/get-all-files-in-directory-python-code/&quot; class=&quot;alert-link&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-get-all-files-in-directory-python-code&quot; data-focus=&quot;false&quot; markdown=&quot;1&quot;&gt;Click here to download the free source code, directories, and bonus materials&lt;/a&gt; that showcase different ways to list files and folders in a directory with Python.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Before &lt;code&gt;pathlib&lt;/code&gt; came out in Python 3.4, if you wanted to work with file paths, then you’d use the &lt;a href=&quot;https://docs.python.org/3/library/os.html&quot;&gt;&lt;code&gt;os&lt;/code&gt;&lt;/a&gt; module. While this was very efficient in terms of performance, you had to handle all the paths as &lt;a href=&quot;https://realpython.com/python-strings/&quot;&gt;strings&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Handling paths as strings may seem okay at first, but once you start bringing multiple operating systems into the mix, things get more tricky. You also end up with a bunch of code related to string manipulation, which can get very abstracted from what a file path is. Things can get cryptic pretty quickly.&lt;/p&gt;
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Check out the downloadable materials for some tests that you can run on your machine. The tests will compare the time it takes to return a list of all the items in a directory using methods from the &lt;code&gt;pathlib&lt;/code&gt; module, the &lt;code&gt;os&lt;/code&gt; module, and even the future &lt;a href=&quot;https://realpython.com/python-pre-release/&quot;&gt;Python 3.12&lt;/a&gt; version of &lt;code&gt;pathlib&lt;/code&gt;. That new version includes the well-known &lt;code&gt;walk()&lt;/code&gt; function, which you won’t cover in this tutorial.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;That’s not to say that working with paths as strings isn’t feasible—after all, developers managed fine without &lt;code&gt;pathlib&lt;/code&gt; for many years! The &lt;code&gt;pathlib&lt;/code&gt; module just takes care of a lot of the tricky stuff and lets you focus on the main logic of your code.&lt;/p&gt;
+&lt;p&gt;It all begins with creating a &lt;code&gt;Path&lt;/code&gt; object, which will be different depending on your operating system (OS). On Windows, you’ll get a &lt;code&gt;WindowsPath&lt;/code&gt; object, while Linux and macOS will return &lt;code&gt;PosixPath&lt;/code&gt;:&lt;/p&gt;
+&lt;ul class=&quot;nav nav-tabs justify-content-end js-platform-widget-tabs&quot; role=&quot;tablist&quot;&gt;
+
+  &lt;li class=&quot;nav-item mb-0 js-platform-widget-tab-windows&quot; role=&quot;presentation&quot;&gt;
+    &lt;a class=&quot;nav-link link-unstyled text-body active small&quot; id=&quot;windows-tab-1&quot; data-toggle=&quot;tab&quot; href=&quot;#windows-1&quot; role=&quot;tab&quot; aria-controls=&quot;windows-1&quot; aria-selected=&quot;true&quot;&gt;&lt;i class=&quot;fa fa-windows text-muted mr-1&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Windows&lt;/a&gt;
+  &lt;/li&gt;
+
+
+
+
+  &lt;li class=&quot;nav-item mb-0 js-platform-widget-tab-linuxmacos&quot; role=&quot;presentation&quot;&gt;
+    &lt;a class=&quot;nav-link link-unstyled text-body small&quot; id=&quot;macos-tab-1&quot; data-toggle=&quot;tab&quot; href=&quot;#linux-macos-1&quot; role=&quot;tab&quot; aria-controls=&quot;linux-macos-1&quot; aria-selected=&quot;false&quot;&gt;&lt;i class=&quot;fa fa-linux text-muted mr-1&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;i class=&quot;fa fa-apple text-muted mr-1&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Linux + macOS&lt;/a&gt;
+  &lt;/li&gt;
+
+&lt;/ul&gt;
+&lt;div class=&quot;tab-content mt-2 mb-0 js-platform-widget-content&quot;&gt;
+&lt;div aria-labelledby=&quot;windows-tab-1&quot; class=&quot;tab-pane fade show active&quot; id=&quot;windows-1&quot; role=&quot;tabpanel&quot;&gt;
+&lt;div class=&quot;highlight python repl&quot;&gt;&lt;span class=&quot;repl-toggle&quot; title=&quot;Toggle REPL prompts and output&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pathlib&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;desktop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pathlib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;C:/Users/RealPython/Desktop&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;desktop&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;WindowsPath(&quot;C:/Users/RealPython/Desktop&quot;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div aria-labelledby=&quot;linux-macos-tab-1&quot; class=&quot;tab-pane fade &quot; id=&quot;linux-macos-1&quot; role=&quot;tabpanel&quot;&gt;
+&lt;div class=&quot;highlight python repl&quot;&gt;&lt;span class=&quot;repl-toggle&quot; title=&quot;Toggle REPL prompts and output&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pathlib&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;desktop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pathlib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/home/RealPython/Desktop&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;desktop&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;PosixPath(&#x27;/home/RealPython/Desktop&#x27;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;With these OS-aware objects, you can take advantage of the many methods and properties available, such as ones to get a list of files and folders.&lt;/p&gt;
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you’re interested in learning more about &lt;code&gt;pathlib&lt;/code&gt; and its features, then check out &lt;a href=&quot;https://realpython.com/python-pathlib/&quot;&gt;Python 3’s pathlib Module: Taming the File System&lt;/a&gt; and the &lt;a href=&quot;https://docs.python.org/3/library/pathlib.html&quot;&gt;&lt;code&gt;pathlib&lt;/code&gt; documentation&lt;/a&gt;. &lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Now, it’s time to dive into listing folder contents. Be aware that there are several ways to do this, and picking the right one will depend on your specific use case.&lt;/p&gt;
+&lt;h2 id=&quot;getting-a-list-of-all-files-and-folders-in-a-directory-in-python&quot;&gt;Getting a List of All Files and Folders in a Directory in Python&lt;a class=&quot;headerlink&quot; href=&quot;#getting-a-list-of-all-files-and-folders-in-a-directory-in-python&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Before getting started on listing, you’ll want a set of files that matches what you’ll encounter in this tutorial. In the supplementary materials, you’ll find a folder called &lt;em&gt;Desktop&lt;/em&gt;. If you plan to follow along, download this folder and navigate to the &lt;em&gt;parent&lt;/em&gt; folder and start your &lt;a href=&quot;https://realpython.com/interacting-with-python/&quot;&gt;Python REPL&lt;/a&gt; there:&lt;/p&gt;
+&lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong markdown=&quot;1&quot;&gt;Source Code:&lt;/strong&gt; &lt;a href=&quot;https://realpython.com/bonus/get-all-files-in-directory-python-code/&quot; class=&quot;alert-link&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-get-all-files-in-directory-python-code&quot; data-focus=&quot;false&quot; markdown=&quot;1&quot;&gt;Click here to download the free source code, directories, and bonus materials&lt;/a&gt; that showcase different ways to list files and folders in a directory with Python.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;You could also use your own desktop too. Just start the Python REPL in the parent directory of your desktop, and the examples should work, but you’ll have your own files in the output instead.&lt;/p&gt;
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You’ll mainly see &lt;code&gt;WindowsPath&lt;/code&gt; objects as outputs in this tutorial. If you’re following along on Linux or macOS, then you’ll see &lt;code&gt;PosixPath&lt;/code&gt; instead. That’ll be the only difference. The code you write is the same on all platforms.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;If you only need to list the contents of a given directory, and you don’t need to get the contents of each &lt;em&gt;subdirectory&lt;/em&gt; too, then you can use the &lt;code&gt;Path&lt;/code&gt; object’s &lt;code&gt;.iterdir()&lt;/code&gt; method. If your aim is to move through directories and subdirectories &lt;a href=&quot;https://realpython.com/python-recursion/&quot;&gt;recursively&lt;/a&gt;, then you can jump ahead to &lt;a href=&quot;#recursively-listing-with-rglob&quot;&gt;the section on recursive listing&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;.iterdir()&lt;/code&gt; method, when called on a &lt;code&gt;Path&lt;/code&gt; object, returns a &lt;a href=&quot;https://realpython.com/introduction-to-python-generators/&quot;&gt;generator&lt;/a&gt; that yields &lt;code&gt;Path&lt;/code&gt; objects representing child items. If you wrap the generator in a &lt;code&gt;list()&lt;/code&gt; constructor, then you can see your list of files and folders:&lt;/p&gt;
+&lt;div class=&quot;highlight python repl&quot;&gt;&lt;span class=&quot;repl-toggle&quot; title=&quot;Toggle REPL prompts and output&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pathlib&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;desktop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pathlib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Desktop&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# .iterdir() produces a generator&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;desktop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iterdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;&amp;lt;generator object Path.iterdir at 0x000001A8A5110740&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Which you can wrap in a list() constructor to materialize&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;desktop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iterdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;[WindowsPath(&#x27;Desktop/Notes&#x27;),&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt; WindowsPath(&#x27;Desktop/realpython&#x27;),&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt; WindowsPath(&#x27;Desktop/scripts&#x27;),&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt; WindowsPath(&#x27;Desktop/todo.txt&#x27;)]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Passing the generator produced by &lt;code&gt;.iterdir()&lt;/code&gt; to the &lt;code&gt;list()&lt;/code&gt; constructor provides you with a list of &lt;code&gt;Path&lt;/code&gt; objects representing all the items in the &lt;em&gt;Desktop&lt;/em&gt; directory.&lt;/p&gt;
+&lt;p&gt;As with all generators, you can also use a &lt;code&gt;for&lt;/code&gt; loop to iterate over each item that the generator yields. This gives you the chance to explore some of the properties of each object:&lt;/p&gt;
+&lt;div class=&quot;highlight python repl&quot;&gt;&lt;span class=&quot;repl-toggle&quot; title=&quot;Toggle REPL prompts and output&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;desktop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pathlib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Desktop&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;desktop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iterdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;... &lt;/span&gt;    &lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sa&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; - &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#x27;dir&#x27;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#x27;file&#x27;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Desktop\Notes - dir&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Desktop\realpython - dir&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Desktop\scripts - dir&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Desktop\todo.txt - file&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;h2&gt;&lt;a href=&quot;https://realpython.com/get-all-files-in-directory-python/?utm_source=realpython&amp;utm_medium=rss&quot;&gt;Read the full article at https://realpython.com/get-all-files-in-directory-python/ »&lt;/a&gt;&lt;/h2&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>The Real Python Podcast – Episode #134: Building Python REST APIs With Flask &amp; Structuring Pull Requests</title>
+      <id>https://realpython.com/podcasts/rpp/134/</id>
+      <link href="https://realpython.com/podcasts/rpp/134/"/>
+      <updated>2022-11-25T12:00:00+00:00</updated>
+      <summary>How do you build a REST API using the Flask web framework? How can you quickly add endpoints while automatically generating documentation? This week on the show, Real Python author Philipp Acsany is here to discuss his tutorial series &quot;Python REST APIs With Flask, Connexion, and SQLAlchemy.&quot; Christopher Trudeau is also here with another batch of PyCoder&#x27;s Weekly articles and projects.</summary>
+      <content type="html">
+        &lt;p&gt;How do you build a REST API using the Flask web framework? How can you quickly add endpoints while automatically generating documentation? This week on the show, Real Python author Philipp Acsany is here to discuss his tutorial series &quot;Python REST APIs With Flask, Connexion, and SQLAlchemy.&quot; Christopher Trudeau is also here with another batch of PyCoder&#x27;s Weekly articles and projects.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Microsoft Power BI and Python: Two Superpowers Combined</title>
+      <id>https://realpython.com/power-bi-python/</id>
+      <link href="https://realpython.com/power-bi-python/"/>
+      <updated>2022-11-23T14:00:00+00:00</updated>
+      <summary>In this tutorial, you&#x27;ll learn how to install and configure Microsoft Power BI to work with Python. Using Python, you&#x27;ll import data from a SQLite database, transform and augment your dataset with pandas, and visualize it with Matplotlib.</summary>
+      <content type="html">
+        &lt;div&gt;&lt;p&gt;&lt;a href=&quot;https://powerbi.microsoft.com/en-us/&quot;&gt;Microsoft Power BI&lt;/a&gt; is an interactive data analysis and visualization tool that’s used for &lt;strong&gt;business intelligence&lt;/strong&gt; (BI) and that you can now script with Python. By combining these two technologies, you can extend Power BI’s &lt;a href=&quot;https://dataintegrationinfo.com/what-is-data-ingestion/&quot;&gt;data ingestion&lt;/a&gt;, transformation, &lt;a href=&quot;https://en.wikipedia.org/wiki/Data_augmentation&quot;&gt;augmentation&lt;/a&gt;, and visualization capabilities. In addition, you’ll be able to bring complex algorithms shipped with Python’s numerous &lt;strong&gt;data science&lt;/strong&gt; and &lt;strong&gt;machine learning&lt;/strong&gt; libraries to Power BI.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In this tutorial, you’ll learn how to:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Install&lt;/strong&gt; and &lt;strong&gt;configure&lt;/strong&gt; the Python and Power BI environment&lt;/li&gt;
+&lt;li&gt;Use Python to &lt;strong&gt;import&lt;/strong&gt; and &lt;strong&gt;transform&lt;/strong&gt; data&lt;/li&gt;
+&lt;li&gt;Make &lt;strong&gt;custom visualizations&lt;/strong&gt; using Python&lt;/li&gt;
+&lt;li&gt;Reuse your existing &lt;strong&gt;Python source code&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Understand the &lt;strong&gt;limitations&lt;/strong&gt; of using Python in Power BI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Whether you’re new to Power BI, Python, or both, you’ll learn how to use them together. However, it would help if you knew some &lt;a href=&quot;https://realpython.com/products/python-basics-book/&quot;&gt;Python basics&lt;/a&gt; and &lt;a href=&quot;https://realpython.com/python-sql-libraries/&quot;&gt;SQL&lt;/a&gt; to benefit fully from this tutorial. Additionally, familiarity with the &lt;a href=&quot;https://realpython.com/pandas-python-explore-dataset/&quot;&gt;pandas&lt;/a&gt; and &lt;a href=&quot;https://realpython.com/python-matplotlib-guide/&quot;&gt;Matplotlib&lt;/a&gt; libraries would be a plus. But don’t worry if you don’t know them, as you’ll learn everything you need on the job.&lt;/p&gt;
+&lt;p&gt;While Power BI has potential across the world of business, in this tutorial, you’ll focus on sales data. Click the link below to download a sample dataset and the Python scripts that you’ll be using in this tutorial:&lt;/p&gt;
+&lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong markdown=&quot;1&quot;&gt;Source Code:&lt;/strong&gt; &lt;a href=&quot;https://realpython.com/bonus/power-bi-python-code/&quot; class=&quot;alert-link&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-power-bi-python-code&quot; data-focus=&quot;false&quot; markdown=&quot;1&quot;&gt;Click here to get the free source code and dataset&lt;/a&gt; that you’ll use to combine Python and Power BI for superpowered business insights.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;preparing-your-environment&quot;&gt;Preparing Your Environment&lt;a class=&quot;headerlink&quot; href=&quot;#preparing-your-environment&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To follow this tutorial, you’ll need &lt;strong&gt;Windows 8.1 or later&lt;/strong&gt;. If you’re currently using macOS or a Linux distribution, then you can get a free &lt;strong&gt;virtual machine&lt;/strong&gt; with an evaluation release of the &lt;a href=&quot;https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/&quot;&gt;Windows 11 development environment&lt;/a&gt;, which you can run through the open-source &lt;a href=&quot;https://www.virtualbox.org/&quot;&gt;VirtualBox&lt;/a&gt; or a commercial alternative.&lt;/p&gt;
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The Windows image weighs approximately 20 gigabytes, so it can take a long time to download and install. Beware of the fact that running another operating system in a virtual machine will require a considerable amount of computer memory.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;In this section, you’ll install and configure all the necessary tools to run Python and Power BI. By the end of it, you’ll be ready to integrate Python code into your Power BI reports!&lt;/p&gt;
+&lt;h3 id=&quot;install-microsoft-power-bi-desktop&quot;&gt;Install Microsoft Power BI Desktop&lt;a class=&quot;headerlink&quot; href=&quot;#install-microsoft-power-bi-desktop&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Microsoft Power BI is a collection of various tools and services, some of which require a Microsoft account, a subscription plan, and an Internet connection. Fortunately for you, in this tutorial, you’ll use &lt;strong&gt;Microsoft Power BI Desktop&lt;/strong&gt;, which is completely free of charge, doesn’t require a Microsoft account, and can work offline just like a traditional office suite.&lt;/p&gt;
+&lt;p&gt;There are a few ways in which you can obtain and install Microsoft Power BI Desktop on your computer. The recommended approach, which is arguably the most convenient one, is to use &lt;a href=&quot;https://en.wikipedia.org/wiki/Microsoft_Store&quot;&gt;Microsoft Store&lt;/a&gt;, accessible from the Start menu or its web-based storefront:&lt;/p&gt;
+&lt;figure class=&quot;js-lightbox&quot;&gt;&lt;a href=&quot;https://files.realpython.com/media/pbi_ms_store.50ee4a8a6c08.png&quot; target=&quot;_blank&quot;&gt;&lt;img loading=&quot;lazy&quot; class=&quot;img-fluid mx-auto d-block border &quot; src=&quot;https://files.realpython.com/media/pbi_ms_store.50ee4a8a6c08.png&quot; width=&quot;2560&quot; height=&quot;1440&quot; srcset=&quot;https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/pbi_ms_store.50ee4a8a6c08.png&amp;amp;w=640&amp;amp;sig=ed9d5c39461a7716514d6fd69d0bbca5e12e8a26 640w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/pbi_ms_store.50ee4a8a6c08.png&amp;amp;w=1280&amp;amp;sig=686911c739644ec3014c4b9f1d184836bc87789a 1280w, https://files.realpython.com/media/pbi_ms_store.50ee4a8a6c08.png 2560w&quot; sizes=&quot;75vw&quot; alt=&quot;Power BI Desktop in Microsoft Store&quot; data-asset=&quot;4682&quot;&gt;&lt;/a&gt;&lt;figcaption class=&quot;figure-caption text-center&quot;&gt;Power BI Desktop in Microsoft Store&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;By &lt;a href=&quot;https://apps.microsoft.com/store/detail/power-bi-desktop/9NTXR16HNW1T&quot;&gt;installing Power BI Desktop from the Microsoft Store&lt;/a&gt;, you’ll ensure automatic and quick updates to the latest Power BI versions without having to be logged in as the system’s administrator. However, if that method doesn’t work for you, then you can always try &lt;a href=&quot;https://www.microsoft.com/en-us/download/details.aspx?id=58494&quot;&gt;downloading the installer&lt;/a&gt; from the Microsoft Download Center and running it manually. The executable file is roughly four hundred megabytes in size.&lt;/p&gt;
+&lt;p&gt;Once you have the Power BI Desktop application installed, launch it, and you’ll be greeted with a welcome screen similar to the following one:&lt;/p&gt;
+&lt;figure class=&quot;js-lightbox&quot;&gt;&lt;a href=&quot;https://files.realpython.com/media/pbi_welcome_screen.0589e9f939e7.png&quot; target=&quot;_blank&quot;&gt;&lt;img loading=&quot;lazy&quot; class=&quot;img-fluid mx-auto d-block border &quot; src=&quot;https://files.realpython.com/media/pbi_welcome_screen.0589e9f939e7.png&quot; width=&quot;1920&quot; height=&quot;1080&quot; srcset=&quot;https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/pbi_welcome_screen.0589e9f939e7.png&amp;amp;w=480&amp;amp;sig=f49fbbe3d66c78810dcc75c9e61b0f7e3d4870e5 480w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/pbi_welcome_screen.0589e9f939e7.png&amp;amp;w=960&amp;amp;sig=b54e708528a1f22c262522c5272d88f2de9ded7e 960w, https://files.realpython.com/media/pbi_welcome_screen.0589e9f939e7.png 1920w&quot; sizes=&quot;75vw&quot; alt=&quot;The Welcome Screen in Power BI Desktop&quot; data-asset=&quot;4683&quot;&gt;&lt;/a&gt;&lt;figcaption class=&quot;figure-caption text-center&quot;&gt;The Welcome Screen in Power BI Desktop&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Don’t worry if the Power BI Desktop user interface feels intimidating at first. You’ll get to know the basics as you make your way through the tutorial.&lt;/p&gt;
+&lt;h3 id=&quot;install-microsoft-visual-studio-code&quot;&gt;Install Microsoft Visual Studio Code&lt;a class=&quot;headerlink&quot; href=&quot;#install-microsoft-visual-studio-code&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Microsoft Power BI Desktop offers only rudimentary code editing features, which is understandable since it’s mainly a data analysis tool. It doesn’t have intelligent contextual suggestions, auto-completion, or syntax highlighting for Python, all of which are invaluable when working with code. Therefore, you should really use an external &lt;a href=&quot;https://realpython.com/python-ides-code-editors-guide/&quot;&gt;code editor&lt;/a&gt; for writing anything but the most straightforward Python scripts in Power BI.&lt;/p&gt;
+&lt;p&gt;Feel free to skip this step if you already use an IDE like &lt;a href=&quot;https://realpython.com/pycharm-guide/&quot;&gt;PyCharm&lt;/a&gt; or if you don’t need any of the fancy code editing features in your workflow. Otherwise, consider installing &lt;a href=&quot;https://realpython.com/python-development-visual-studio-code/&quot;&gt;Visual Studio Code&lt;/a&gt;, which is a free, modern, and extremely popular code editor. Because it’s made by Microsoft, you can quickly find it in the Microsoft Store:&lt;/p&gt;
+&lt;figure class=&quot;js-lightbox&quot;&gt;&lt;a href=&quot;https://files.realpython.com/media/vscode_ms_store.8211ffaf570f.png&quot; target=&quot;_blank&quot;&gt;&lt;img loading=&quot;lazy&quot; class=&quot;img-fluid mx-auto d-block &quot; src=&quot;https://files.realpython.com/media/vscode_ms_store.8211ffaf570f.png&quot; width=&quot;1026&quot; height=&quot;828&quot; srcset=&quot;https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/vscode_ms_store.8211ffaf570f.png&amp;amp;w=256&amp;amp;sig=394263a2f4c6669309f4a21691fca102788fd9d0 256w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/vscode_ms_store.8211ffaf570f.png&amp;amp;w=513&amp;amp;sig=bfc992a781f19de614fe51630c5ab0a7538c1076 513w, https://files.realpython.com/media/vscode_ms_store.8211ffaf570f.png 1026w&quot; sizes=&quot;75vw&quot; alt=&quot;Visual Studio Code in Microsoft Store&quot; data-asset=&quot;4684&quot;&gt;&lt;/a&gt;&lt;figcaption class=&quot;figure-caption text-center&quot;&gt;Visual Studio Code in Microsoft Store&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Microsoft Visual Studio Code, or &lt;strong&gt;VS Code&lt;/strong&gt; as some like to call it, is a universal code editor that supports many programming languages through extensions. It doesn’t understand Python out of the box. But when you open an existing file with Python source code or create a new file and select Python as the language in VS Code, then it’ll prompt you to install the &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=ms-python.python&quot;&gt;recommended set of extensions&lt;/a&gt; for Python:&lt;/p&gt;
+&lt;figure class=&quot;js-lightbox&quot;&gt;&lt;a href=&quot;https://files.realpython.com/media/vscode_extensions.2824af0d2009.png&quot; target=&quot;_blank&quot;&gt;&lt;img loading=&quot;lazy&quot; class=&quot;img-fluid mx-auto d-block border &quot; src=&quot;https://files.realpython.com/media/vscode_extensions.2824af0d2009.png&quot; width=&quot;1920&quot; height=&quot;1080&quot; srcset=&quot;https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/vscode_extensions.2824af0d2009.png&amp;amp;w=480&amp;amp;sig=27d5c2faad0298e8f12545c1a5761d00cc4195fc 480w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/vscode_extensions.2824af0d2009.png&amp;amp;w=960&amp;amp;sig=5c4b6d7e2cd184cbcfbde4d4d0fef10ac659ab68 960w, https://files.realpython.com/media/vscode_extensions.2824af0d2009.png 1920w&quot; sizes=&quot;75vw&quot; alt=&quot;Visual Studio Code Extensions for Python&quot; data-asset=&quot;4685&quot;&gt;&lt;/a&gt;&lt;figcaption class=&quot;figure-caption text-center&quot;&gt;Visual Studio Code Extensions for Python&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;After you confirm and proceed, VS Code will ask you to specify the path to your Python interpreter. In most cases, it’ll be able to detect one for you automatically. If you haven’t installed Python on your computer yet, then check out the next section, where you’ll also get your hands on pandas and Matplotlib.&lt;/p&gt;
+&lt;/div&gt;&lt;h2&gt;&lt;a href=&quot;https://realpython.com/power-bi-python/?utm_source=realpython&amp;utm_medium=rss&quot;&gt;Read the full article at https://realpython.com/power-bi-python/ »&lt;/a&gt;&lt;/h2&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Everyday Project Packaging With pyproject.toml</title>
+      <id>https://realpython.com/courses/packaging-with-pyproject-toml/</id>
+      <link href="https://realpython.com/courses/packaging-with-pyproject-toml/"/>
+      <updated>2022-11-22T14:00:00+00:00</updated>
+      <summary>In this Code Conversation video course, you&#x27;ll learn how to package your everyday projects with pyproject.toml. Playing on the same team as the import system means you can call your project from anywhere, ensure consistent imports, and have one file that&#x27;ll work for many build systems.</summary>
+      <content type="html">
+        &lt;p&gt;&lt;strong&gt;Packaging&lt;/strong&gt; is often associated with publishing a project on &lt;a href=&quot;https://realpython.com/pypi-publish-python-package/&quot;&gt;PyPI&lt;/a&gt;, which can make you bypass packaging as something you don&amp;rsquo;t need to worry about at the start of your project. Python packaging has also had a long history and can be overwhelming for all levels of programmers. But it doesn&amp;rsquo;t have to be a scary process!&lt;/p&gt;
+&lt;p&gt;In this &lt;strong&gt;Code Conversation&lt;/strong&gt;, you&amp;rsquo;ll follow a chat between Ian and Geir Arne demonstrating the relatively new, officially sanctioned way of setting up your &lt;a href=&quot;https://realpython.com/tutorials/projects/&quot;&gt;Python projects&lt;/a&gt; using a &lt;strong&gt;&lt;code&gt;pyproject.toml&lt;/code&gt; file&lt;/strong&gt; and installing your package with &lt;strong&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/strong&gt;. This offers nice benefits, such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Being able to call your project from anywhere&lt;/li&gt;
+&lt;li&gt;Playing on the same team as the import system&lt;/li&gt;
+&lt;li&gt;Allowing for consistent imports&lt;/li&gt;
+&lt;li&gt;Having one file that&amp;rsquo;ll work for many build systems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Along the way, you&amp;rsquo;ll:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Structure files and folders&lt;/strong&gt; in your project&lt;/li&gt;
+&lt;li&gt;Understand different ways to &lt;strong&gt;run your script&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Explore how the &lt;strong&gt;import system&lt;/strong&gt; works&lt;/li&gt;
+&lt;li&gt;Explore the Python &lt;strong&gt;packaging&lt;/strong&gt; world&lt;/li&gt;
+&lt;li&gt;Write a &lt;code&gt;pyproject.toml&lt;/code&gt; file to &lt;strong&gt;configure your package&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Install your pacakge&lt;/strong&gt; with &lt;code&gt;pip&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You&amp;rsquo;ll also dive into various rabbit holes along the way as Ian and Geir Arne talk about all the aspects of the process.&lt;/p&gt;
+&lt;p&gt;To get the most out of this Code Conversation, you should have a handle on &lt;a href=&quot;https://realpython.com/learning-paths/python3-introduction/&quot;&gt;Python basics&lt;/a&gt;, be able to create a &lt;a href=&quot;https://realpython.com/python-virtual-environments-a-primer/&quot;&gt;virtual environment&lt;/a&gt; and install &lt;a href=&quot;https://realpython.com/python-modules-packages/&quot;&gt;packages&lt;/a&gt;, and have some exposure to the &lt;a href=&quot;https://realpython.com/python-import/&quot;&gt;import system&lt;/a&gt;. Ideally, you have some experience fighting against the import system and thinking that there must be a better way.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Python REST APIs With Flask, Connexion, and SQLAlchemy – Part 3</title>
+      <id>https://realpython.com/flask-connexion-rest-api-part-3/</id>
+      <link href="https://realpython.com/flask-connexion-rest-api-part-3/"/>
+      <updated>2022-11-21T14:00:00+00:00</updated>
+      <summary>In this three-part tutorial series, you&#x27;ll create a RESTful API from scratch to keep track of people and notes using the Flask web framework. You&#x27;ll also test your API with Swagger UI API documentation. In part three, you&#x27;ll use SQLAlchemy to provide the functionality to add notes to a person.</summary>
+      <content type="html">
+        &lt;div&gt;&lt;p&gt;Most modern web applications are powered by a &lt;strong&gt;REST API&lt;/strong&gt; under the hood. That way, developers can separate the front-end code from the back-end logic, and users can interact with the interface dynamically. In this three-part tutorial series, you’re building a REST API with the &lt;strong&gt;Flask web framework&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You’ve created a foundation with a basic Flask project and added endpoints, which you connected to a &lt;strong&gt;SQLite database&lt;/strong&gt;. You’re also testing your API with &lt;strong&gt;Swagger UI API documentation&lt;/strong&gt; that you’re building along the way.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In the third part of this tutorial series, you’ll learn how to:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Work with &lt;strong&gt;multiple tables&lt;/strong&gt; in a database&lt;/li&gt;
+&lt;li&gt;Create &lt;strong&gt;one-to-many&lt;/strong&gt; fields in your database&lt;/li&gt;
+&lt;li&gt;Manage &lt;strong&gt;relationships&lt;/strong&gt; with SQLAlchemy&lt;/li&gt;
+&lt;li&gt;Leverage &lt;strong&gt;nested schemas&lt;/strong&gt; with Marshmallow &lt;/li&gt;
+&lt;li&gt;Display &lt;strong&gt;related objects&lt;/strong&gt; in the front end&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can download the code for the third part of this project by clicking the link below:&lt;/p&gt;
+&lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong markdown=&quot;1&quot;&gt;Source Code:&lt;/strong&gt; &lt;a href=&quot;https://realpython.com/bonus/flask-connexion-rest-api-part-3-code/&quot; class=&quot;alert-link&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-flask-connexion-rest-api-part-3-code&quot; data-focus=&quot;false&quot; markdown=&quot;1&quot;&gt;Click here to download the free source code&lt;/a&gt; that you’ll use to finish building a REST API with the Flask web framework.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;a class=&quot;headerlink&quot; href=&quot;#demo&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In this three-part tutorial series, you’re building a REST API to keep track of notes for people who may visit you throughout the year. You’ll create people like the &lt;a href=&quot;https://en.wikipedia.org/wiki/Tooth_fairy&quot;&gt;Tooth Fairy&lt;/a&gt;, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Easter_Bunny&quot;&gt;Easter Bunny&lt;/a&gt;, and &lt;a href=&quot;https://en.wikipedia.org/wiki/Knecht_Ruprecht&quot;&gt;Knecht Ruprecht&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Ideally, you want to be on good terms with all three of them. That’s why you’ll send them notes, to increase the chance of getting valuable gifts from them.&lt;/p&gt;
+&lt;p&gt;In this tutorial, you’ll expand your programming tool belt further. You’ll learn how to create hierarchical data structures represented as &lt;a href=&quot;https://en.wikipedia.org/wiki/One-to-many_(data_model)&quot;&gt;one-to-many&lt;/a&gt; relationships by SQLAlchemy. In addition, you’ll also extend the REST API that you’ve already built to create, read, update, and delete notes for a person:&lt;/p&gt;
+&lt;figure&gt;
+  &lt;div class=&quot;embed-responsive embed-responsive-16by9 rounded mb-3 border&quot;&gt;
+    &lt;iframe loading=&quot;lazy&quot; class=&quot;embed-responsive-item&quot; src=&quot;https://player.vimeo.com/video/766055660?background=1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;It’s time to finish this three-part tutorial series by creating relationships between people and notes!&lt;/p&gt;
+&lt;h2 id=&quot;planning-part-three&quot;&gt;Planning Part Three&lt;a class=&quot;headerlink&quot; href=&quot;#planning-part-three&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In &lt;a href=&quot;https://realpython.com/flask-connexion-rest-api/&quot;&gt;part one&lt;/a&gt; of this series, you built your REST API. Working through &lt;a href=&quot;https://realpython.com/flask-connexion-rest-api-part-2/&quot;&gt;part two&lt;/a&gt;, you connected your REST API to a database. That way, your Flask application can make changes to existing data and create new data that persists even when you restart your app server.&lt;/p&gt;
+&lt;p&gt;So far, you’ve added the ability to save changes made through the REST API to a database using &lt;a href=&quot;https://realpython.com/python-sqlite-sqlalchemy/&quot;&gt;SQLAlchemy&lt;/a&gt; and learned how to &lt;a href=&quot;https://en.wikipedia.org/wiki/Serialization&quot;&gt;serialize&lt;/a&gt; that data for the REST API using &lt;a href=&quot;https://marshmallow.readthedocs.io/en/stable/&quot;&gt;Marshmallow&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Currently, the &lt;code&gt;people.db&lt;/code&gt; database only contains people data. In this part of the series, you’ll add a new table to store notes. To connect notes to a person, you’ll create &lt;strong&gt;relationships&lt;/strong&gt; between the entries of the &lt;code&gt;person&lt;/code&gt; table and the &lt;code&gt;note&lt;/code&gt; table in your database.&lt;/p&gt;
+&lt;p&gt;You’ll bootstrap &lt;code&gt;people.db&lt;/code&gt; with a &lt;code&gt;build_database.py&lt;/code&gt; script that contains the necessary people and notes data for you.
+Here’s an excerpt of the dataset that you’ll work with:&lt;/p&gt;
+&lt;div class=&quot;highlight python&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;PEOPLE_NOTES&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;lname&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Fairy&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;fname&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Tooth&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;notes&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;I brush my teeth after each meal.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2022-01-06 17:10:24&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;The other day a friend said I have big teeth.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2022-03-05 22:17:54&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Do you pay per gram?&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2022-03-05 22:18:10&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+   &lt;span class=&quot;c1&quot;&gt;# ...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You’ll learn how to adjust your SQLite database to implement relationships. After that, you’ll be able to translate the &lt;code&gt;PEOPLE_NOTES&lt;/code&gt; dictionary into data that conforms with your database structure.&lt;/p&gt;
+&lt;p&gt;Finally, you’ll show the content of your database on the home page of your app and use your Flask REST API to add, update, and delete notes that you’re writing for people.&lt;/p&gt;
+&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;a class=&quot;headerlink&quot; href=&quot;#getting-started&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Ideally, you followed the &lt;a href=&quot;https://realpython.com/flask-connexion-rest-api/&quot;&gt;first part&lt;/a&gt; and the &lt;a href=&quot;https://realpython.com/flask-connexion-rest-api-part-2/&quot;&gt;second part&lt;/a&gt; of this tutorial series before continuing with the third part, which you’re reading right now. Alternatively, you can also download the source code from part two by clicking the link below:&lt;/p&gt;
+&lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong markdown=&quot;1&quot;&gt;Source Code:&lt;/strong&gt; &lt;a href=&quot;https://realpython.com/bonus/flask-connexion-rest-api-part-2-code/&quot; class=&quot;alert-link&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-flask-connexion-rest-api-part-2-code&quot; data-focus=&quot;false&quot; markdown=&quot;1&quot;&gt;Click here to download the free source code&lt;/a&gt; that you’ll use to continue building a REST API with the Flask web framework.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;If you downloaded the source code from the link above, then make sure to follow the installation instructions within the provided &lt;code&gt;README.md&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;Before you continue with the tutorial, verify that your folder structure looks like this:&lt;/p&gt;
+&lt;/div&gt;&lt;h2&gt;&lt;a href=&quot;https://realpython.com/flask-connexion-rest-api-part-3/?utm_source=realpython&amp;utm_medium=rss&quot;&gt;Read the full article at https://realpython.com/flask-connexion-rest-api-part-3/ »&lt;/a&gt;&lt;/h2&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>The Real Python Podcast – Episode #133: Moving Projects Away From Passwords With WebAuthn and Python</title>
+      <id>https://realpython.com/podcasts/rpp/133/</id>
+      <link href="https://realpython.com/podcasts/rpp/133/"/>
+      <updated>2022-11-18T12:00:00+00:00</updated>
+      <summary>What if you didn&#x27;t have to worry about managing user passwords as a Python developer? That&#x27;s where the WebAuthn protocol and new hardware standards are heading. This week on the show, Dan Moore from FusionAuth returns to discuss a password-less future.</summary>
+      <content type="html">
+        &lt;p&gt;What if you didn&#x27;t have to worry about managing user passwords as a Python developer? That&#x27;s where the WebAuthn protocol and new hardware standards are heading. This week on the show, Dan Moore from FusionAuth returns to discuss a password-less future.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Python REST APIs With Flask, Connexion, and SQLAlchemy – Part 2</title>
+      <id>https://realpython.com/flask-connexion-rest-api-part-2/</id>
+      <link href="https://realpython.com/flask-connexion-rest-api-part-2/"/>
+      <updated>2022-11-16T14:00:00+00:00</updated>
+      <summary>In this three-part tutorial series, you&#x27;ll create a RESTful API from scratch to keep track of people and notes using the Flask web framework. You&#x27;ll also test your API with Swagger UI API documentation. In part two, you&#x27;ll implement a SQLite database to store your data permanently.</summary>
+      <content type="html">
+        &lt;div&gt;&lt;p&gt;Most modern web applications are powered by a &lt;strong&gt;REST API&lt;/strong&gt; under the hood. That way, developers can separate the front-end code from the back-end logic, and users can interact with the interface dynamically. In this three-part tutorial series, you’re building a REST API with the &lt;strong&gt;Flask web framework&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You’ve created a foundation with a basic Flask project and added endpoints, which you’ll connect to a &lt;strong&gt;SQLite database&lt;/strong&gt;. You’re also testing your API with &lt;strong&gt;Swagger UI API documentation&lt;/strong&gt; that you’re building along the way.&lt;/p&gt;
+&lt;p&gt;In the &lt;a href=&quot;https://realpython.com/flask-connexion-rest-api/&quot;&gt;first part&lt;/a&gt;, you used Flask and Connexion to create a REST API providing CRUD operations to an in-memory structure called &lt;code&gt;PEOPLE&lt;/code&gt;. By doing so, you learned how the Connexion module helps you build a nice REST API and interactive documentation. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In the second part of this tutorial series, you’ll learn how to:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Write &lt;strong&gt;SQL commands&lt;/strong&gt; in Python&lt;/li&gt;
+&lt;li&gt;Configure a &lt;strong&gt;SQLite database&lt;/strong&gt; for your Flask project&lt;/li&gt;
+&lt;li&gt;Use &lt;strong&gt;SQLAlchemy&lt;/strong&gt; to save Python objects to your database&lt;/li&gt;
+&lt;li&gt;Leverage the &lt;strong&gt;Marshmallow library&lt;/strong&gt; to serialize data&lt;/li&gt;
+&lt;li&gt;Connect your &lt;strong&gt;REST API&lt;/strong&gt; with your database&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After finishing the second part of this series, you’ll move on to the third part, where you’ll extend your REST API with the functionality to add notes to a person. &lt;/p&gt;
+&lt;p&gt;You can download the code for the second part of this project by clicking the link below:&lt;/p&gt;
+&lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong markdown=&quot;1&quot;&gt;Source Code:&lt;/strong&gt; &lt;a href=&quot;https://realpython.com/bonus/flask-connexion-rest-api-part-2-code/&quot; class=&quot;alert-link&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-flask-connexion-rest-api-part-2-code&quot; data-focus=&quot;false&quot; markdown=&quot;1&quot;&gt;Click here to download the free source code&lt;/a&gt; that you’ll use to continue building a REST API with the Flask web framework.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;a class=&quot;headerlink&quot; href=&quot;#demo&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In this three-part tutorial series, you’re building a REST API to keep track of notes for people that may visit you throughout the year. You’ll create people like the &lt;a href=&quot;https://en.wikipedia.org/wiki/Tooth_fairy&quot;&gt;Tooth Fairy&lt;/a&gt;, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Easter_Bunny&quot;&gt;Easter Bunny&lt;/a&gt;, and &lt;a href=&quot;https://en.wikipedia.org/wiki/Knecht_Ruprecht&quot;&gt;Knecht Ruprecht&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Ideally, you want to be on good terms with all three of them. That’s why you’ll send them notes, to increase the chance of getting valuable gifts from them.&lt;/p&gt;
+&lt;p&gt;You can interact with your application by leveraging the API documentation. Along the way, you’re also building a basic front end that reflects the contents of your database:&lt;/p&gt;
+&lt;figure&gt;
+  &lt;div class=&quot;embed-responsive embed-responsive-16by9 rounded mb-3 border&quot;&gt;
+    &lt;iframe loading=&quot;lazy&quot; class=&quot;embed-responsive-item&quot; src=&quot;https://player.vimeo.com/video/766055660?background=1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;In the second part of this series, you’ll enhance the back end of your application by adding a proper database. That way, you’ll persist your data even when you restart your app:&lt;/p&gt;
+&lt;figure&gt;
+  &lt;div class=&quot;embed-responsive embed-responsive-16by9 rounded mb-3 border&quot;&gt;
+    &lt;iframe loading=&quot;lazy&quot; class=&quot;embed-responsive-item&quot; src=&quot;https://player.vimeo.com/video/759061210?background=1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;With your Swagger UI documentation, you’ll be able to interact with your REST API and make sure that everything works as intended.&lt;/p&gt;
+&lt;h2 id=&quot;planning-part-two&quot;&gt;Planning Part Two&lt;a class=&quot;headerlink&quot; href=&quot;#planning-part-two&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In the first part of this tutorial series, you worked with a &lt;code&gt;PEOPLE&lt;/code&gt; dictionary to store your data. The dataset looked like this:&lt;/p&gt;
+&lt;div class=&quot;highlight python&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;PEOPLE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;Fairy&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;fname&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Tooth&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;lname&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Fairy&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;timestamp&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2022-10-08 09:15:10&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;Ruprecht&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;fname&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Knecht&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;lname&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Ruprecht&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;timestamp&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2022-10-08 09:15:13&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;Bunny&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;fname&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Easter&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;lname&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Bunny&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;timestamp&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2022-10-08 09:15:27&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This data structure was handy to get your project up to speed. However, any data that you added with your REST API to &lt;code&gt;PEOPLE&lt;/code&gt; got lost when you restarted your app.&lt;/p&gt;
+&lt;p&gt;In this part, you’ll be translating your &lt;code&gt;PEOPLE&lt;/code&gt; data structure into a database table that’ll look like this:&lt;/p&gt;
+&lt;div class=&quot;table-responsive&quot;&gt;
+&lt;table class=&quot;table table-hover&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;id&lt;/th&gt;
+&lt;th&gt;lname&lt;/th&gt;
+&lt;th&gt;fname&lt;/th&gt;
+&lt;th&gt;timestamp&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Fairy&lt;/td&gt;
+&lt;td&gt;Tooth&lt;/td&gt;
+&lt;td&gt;2022-10-08 09:15:10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Ruprecht&lt;/td&gt;
+&lt;td&gt;Knecht&lt;/td&gt;
+&lt;td&gt;2022-10-08 09:15:13&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;Bunny&lt;/td&gt;
+&lt;td&gt;Easter&lt;/td&gt;
+&lt;td&gt;2022-10-08 09:15:27&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;You won’t make any changes to your REST API endpoints in this tutorial. But the changes that you’ll make in the back end will be significant, and you’ll end up with a much more versatile codebase to help scale your Flask project up in the future.&lt;/p&gt;
+&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;a class=&quot;headerlink&quot; href=&quot;#getting-started&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In this section, you’ll check in with the Flask REST API project that you’re working on. You want to make sure that it’s ready for the next steps in this tutorial series. &lt;/p&gt;
+&lt;/div&gt;&lt;h2&gt;&lt;a href=&quot;https://realpython.com/flask-connexion-rest-api-part-2/?utm_source=realpython&amp;utm_medium=rss&quot;&gt;Read the full article at https://realpython.com/flask-connexion-rest-api-part-2/ »&lt;/a&gt;&lt;/h2&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Deploy a Django App With Gunicorn and Nginx</title>
+      <id>https://realpython.com/courses/django-app-with-gunicorn-nginx/</id>
+      <link href="https://realpython.com/courses/django-app-with-gunicorn-nginx/"/>
+      <updated>2022-11-15T14:00:00+00:00</updated>
+      <summary>Ready to take your Django app beyond development? Learn how to deploy your Django web app in production on a real-world public domain with Gunicorn and Nginx.</summary>
+      <content type="html">
+        &lt;p&gt;Taking a &lt;strong&gt;Django&lt;/strong&gt; app from development to production is a demanding but rewarding process. In this video course, you&amp;rsquo;ll go through that process step by step. You&amp;rsquo;ll start at square one with a no-frills Django application then add in &lt;strong&gt;Gunicorn&lt;/strong&gt;, &lt;strong&gt;Nginx&lt;/strong&gt;, and &lt;strong&gt;domain registration&lt;/strong&gt;. After working through this video course, you&amp;rsquo;ll be better equipped to take your Django app into production and serve it to the world.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In this video course, you&amp;rsquo;ll learn&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How you can take your Django app &lt;strong&gt;from development to production&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;How you can &lt;strong&gt;host your app&lt;/strong&gt; on a real-world public domain&lt;/li&gt;
+&lt;li&gt;How to introduce &lt;strong&gt;Gunicorn&lt;/strong&gt; and &lt;strong&gt;Nginx&lt;/strong&gt; into the request and response chain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To make the most out of this video course, you should have an introductory-level &lt;a href=&quot;https://realpython.com/learning-paths/python3-introduction/&quot;&gt;understanding of Python&lt;/a&gt;, &lt;a href=&quot;https://realpython.com/tutorials/django/&quot;&gt;Django&lt;/a&gt;, and the high-level mechanics of HTTP requests.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Python REST APIs With Flask, Connexion, and SQLAlchemy – Part 1</title>
+      <id>https://realpython.com/flask-connexion-rest-api/</id>
+      <link href="https://realpython.com/flask-connexion-rest-api/"/>
+      <updated>2022-11-14T14:00:00+00:00</updated>
+      <summary>In this three-part tutorial series, you&#x27;ll create a RESTful API from scratch to keep track of people and notes using the Flask web framework. You&#x27;ll also test your API with Swagger UI API documentation. In part one, you&#x27;ll build the foundation of your note-keeping app.</summary>
+      <content type="html">
+        &lt;div&gt;&lt;p&gt;Most modern web applications are powered by a &lt;strong&gt;REST API&lt;/strong&gt; under the hood. That way, developers can separate the front-end code from the back-end logic, and users can interact with the interface dynamically. In this three-part tutorial series, you’ll build a REST API with the &lt;strong&gt;Flask web framework&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You’ll create a foundation with a basic Flask project then add endpoints and connect them to a &lt;strong&gt;SQLite database&lt;/strong&gt;. You’ll test your API with &lt;strong&gt;Swagger UI API documentation&lt;/strong&gt; that you’ll build along the way.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In the first part of this tutorial series, you’ll learn how to:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Build a base &lt;strong&gt;Flask&lt;/strong&gt; project with a &lt;strong&gt;REST API&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Handle &lt;strong&gt;HTTP requests&lt;/strong&gt; with &lt;strong&gt;Connexion&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Define &lt;strong&gt;API endpoints&lt;/strong&gt; using the &lt;strong&gt;OpenAPI&lt;/strong&gt; specification&lt;/li&gt;
+&lt;li&gt;Interact with your &lt;strong&gt;API&lt;/strong&gt; to manage data&lt;/li&gt;
+&lt;li&gt;Build &lt;strong&gt;API documentation&lt;/strong&gt; with &lt;strong&gt;Swagger UI&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After finishing the first part of this series, you’ll move on to the second part, where you’ll learn to use a proper database to store your data permanently instead of relying on in-memory storage.&lt;/p&gt;
+&lt;p&gt;This tutorial series is a hand-on guide on how to create a REST API with Flask and interact with it using &lt;a href=&quot;https://en.wikipedia.org/wiki/Create,_read,_update_and_delete&quot;&gt;CRUD operations&lt;/a&gt;. If you want to refresh your knowledge on working with APIs, then you can give &lt;a href=&quot;https://realpython.com/api-integration-in-python/&quot;&gt;Python and REST APIs: Interacting With Web Services&lt;/a&gt; a read.&lt;/p&gt;
+&lt;p&gt;You can download the code for the first part of this project by clicking the link below:&lt;/p&gt;
+&lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong markdown=&quot;1&quot;&gt;Source Code:&lt;/strong&gt; &lt;a href=&quot;https://realpython.com/bonus/flask-connexion-rest-api-part-1-code/&quot; class=&quot;alert-link&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-flask-connexion-rest-api-part-1-code&quot; data-focus=&quot;false&quot; markdown=&quot;1&quot;&gt;Click here to download the free source code&lt;/a&gt; that you’ll use to build a REST API with the Flask web framework.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;a class=&quot;headerlink&quot; href=&quot;#demo&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In this three-part tutorial series, you’ll build a REST API to keep track of notes for people that may visit you throughout the year. In this tutorial, you’ll create people like the &lt;a href=&quot;https://en.wikipedia.org/wiki/Tooth_fairy&quot;&gt;Tooth Fairy&lt;/a&gt;, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Easter_Bunny&quot;&gt;Easter Bunny&lt;/a&gt;, and &lt;a href=&quot;https://en.wikipedia.org/wiki/Knecht_Ruprecht&quot;&gt;Knecht Ruprecht&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Ideally, you want to be on good terms with all three of them. That’s why you’ll send them notes, to increase the chance of getting valuable gifts from them.&lt;/p&gt;
+&lt;p&gt;You can interact with your application by leveraging the API documentation. Along the way, you’ll build a basic front end that reflects the contents of your database:&lt;/p&gt;
+&lt;figure&gt;
+  &lt;div class=&quot;embed-responsive embed-responsive-16by9 rounded mb-3 border&quot;&gt;
+    &lt;iframe loading=&quot;lazy&quot; class=&quot;embed-responsive-item&quot; src=&quot;https://player.vimeo.com/video/766055660?background=1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;In the first part of this series, you’ll create a base Flask project and plug in your first API endpoints. At the end of this part, you’ll be able to see a list of people in the front end and manage each person in the back end:&lt;/p&gt;
+&lt;figure&gt;
+  &lt;div class=&quot;embed-responsive embed-responsive-16by9 rounded mb-3 border&quot;&gt;
+    &lt;iframe loading=&quot;lazy&quot; class=&quot;embed-responsive-item&quot; src=&quot;https://player.vimeo.com/video/759061156?background=1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;By leveraging Swagger UI, you’ll create handy documentation for your API along the way. That way, you’ll have the opportunity to test how your API works at each stage of this tutorial and get a useful overview of all your endpoints.&lt;/p&gt;
+&lt;h2 id=&quot;planning-part-one&quot;&gt;Planning Part One&lt;a class=&quot;headerlink&quot; href=&quot;#planning-part-one&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Besides building the Flask project foundation, you’re going to create a REST API that provides access to a collection of people and to the individuals within that collection. Here’s the API design for the people collection:&lt;/p&gt;
+&lt;div class=&quot;table-responsive&quot;&gt;
+&lt;table class=&quot;table table-hover&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th class=&quot;text-left&quot;&gt;Action&lt;/th&gt;
+&lt;th class=&quot;text-left&quot;&gt;HTTP Verb&lt;/th&gt;
+&lt;th class=&quot;text-left&quot;&gt;URL Path&lt;/th&gt;
+&lt;th class=&quot;text-left&quot;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&quot;text-left&quot;&gt;Read&lt;/td&gt;
+&lt;td class=&quot;text-left&quot;&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/td&gt;
+&lt;td class=&quot;text-left&quot;&gt;&lt;code&gt;/api/people&lt;/code&gt;&lt;/td&gt;
+&lt;td class=&quot;text-left&quot;&gt;Read a collection of people.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;text-left&quot;&gt;Create&lt;/td&gt;
+&lt;td class=&quot;text-left&quot;&gt;&lt;code&gt;POST&lt;/code&gt;&lt;/td&gt;
+&lt;td class=&quot;text-left&quot;&gt;&lt;code&gt;/api/people&lt;/code&gt;&lt;/td&gt;
+&lt;td class=&quot;text-left&quot;&gt;Create a new person.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;text-left&quot;&gt;Read&lt;/td&gt;
+&lt;td class=&quot;text-left&quot;&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/td&gt;
+&lt;td class=&quot;text-left&quot;&gt;&lt;code&gt;/api/people/&amp;lt;lname&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td class=&quot;text-left&quot;&gt;Read a particular person.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;text-left&quot;&gt;Update&lt;/td&gt;
+&lt;td class=&quot;text-left&quot;&gt;&lt;code&gt;PUT&lt;/code&gt;&lt;/td&gt;
+&lt;td class=&quot;text-left&quot;&gt;&lt;code&gt;/api/people/&amp;lt;lname&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td class=&quot;text-left&quot;&gt;Update an existing person.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;text-left&quot;&gt;Delete&lt;/td&gt;
+&lt;td class=&quot;text-left&quot;&gt;&lt;code&gt;DELETE&lt;/code&gt;&lt;/td&gt;
+&lt;td class=&quot;text-left&quot;&gt;&lt;code&gt;/api/people/&amp;lt;lname&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td class=&quot;text-left&quot;&gt;Delete an existing person.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;The REST API that you’ll be building will serve a simple people data structure where the people are keyed to the last name, and any updates are marked with a new timestamp.&lt;/p&gt;
+&lt;p&gt;The dataset that you’ll be working with looks like this:&lt;/p&gt;
+&lt;div class=&quot;highlight python&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;PEOPLE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;Fairy&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;fname&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Tooth&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;lname&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Fairy&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;timestamp&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2022-10-08 09:15:10&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;Ruprecht&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;fname&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Knecht&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;lname&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Ruprecht&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;timestamp&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2022-10-08 09:15:13&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;Bunny&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;fname&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Easter&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;lname&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Bunny&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;timestamp&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2022-10-08 09:15:27&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;One of the purposes of an API is to decouple the data from the application that uses it, thereby hiding the data implementation details. Later in this tutorial series, you’ll save your data in a database. But for the start, an in-memory data structure works fine.&lt;/p&gt;
+&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;a class=&quot;headerlink&quot; href=&quot;#getting-started&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In this section, you’ll prepare the development environment for your Flask REST API project. First, you’ll create a &lt;strong&gt;virtual environment&lt;/strong&gt; and install all the &lt;strong&gt;dependencies&lt;/strong&gt; that you need for your project.&lt;/p&gt;
+&lt;/div&gt;&lt;h2&gt;&lt;a href=&quot;https://realpython.com/flask-connexion-rest-api/?utm_source=realpython&amp;utm_medium=rss&quot;&gt;Read the full article at https://realpython.com/flask-connexion-rest-api/ »&lt;/a&gt;&lt;/h2&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>The Real Python Podcast – Episode #132: Creating Tic-Tac-Toe With an AI Player &amp; Shortcuts for Python Decorators</title>
+      <id>https://realpython.com/podcasts/rpp/132/</id>
+      <link href="https://realpython.com/podcasts/rpp/132/"/>
+      <updated>2022-11-11T12:00:00+00:00</updated>
+      <summary>How do you create a computer opponent for a simple game within Python? Would you also like to learn how to adapt the game to run in a web browser or graphical user interface (GUI)? This week on the show, Christopher Trudeau is here, bringing another batch of PyCoder&#x27;s Weekly articles and projects.</summary>
+      <content type="html">
+        &lt;p&gt;How do you create a computer opponent for a simple game within Python? Would you also like to learn how to adapt the game to run in a web browser or graphical user interface (GUI)? This week on the show, Christopher Trudeau is here, bringing another batch of PyCoder&#x27;s Weekly articles and projects.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Getters and Setters: Manage Attributes in Python</title>
+      <id>https://realpython.com/python-getter-setter/</id>
+      <link href="https://realpython.com/python-getter-setter/"/>
+      <updated>2022-11-09T14:00:00+00:00</updated>
+      <summary>In this tutorial, you&#x27;ll learn what getter and setter methods are, how Python properties are preferred over getters and setters when dealing with attribute access and mutation, and when to use getter and setter methods instead of properties in Python.</summary>
+      <content type="html">
+        &lt;div&gt;&lt;p&gt;If you come from a language like &lt;a href=&quot;https://realpython.com/java-vs-python/&quot;&gt;Java&lt;/a&gt; or &lt;a href=&quot;https://realpython.com/python-vs-cpp/&quot;&gt;C++&lt;/a&gt;, then you’re probably used to writing &lt;strong&gt;getter&lt;/strong&gt; and &lt;strong&gt;setter&lt;/strong&gt; methods for every attribute in your classes. These methods allow you to access and mutate private attributes while maintaining &lt;strong&gt;encapsulation&lt;/strong&gt;. In Python, you’ll typically expose attributes as part of your public API and use &lt;strong&gt;properties&lt;/strong&gt; when you need attributes with functional behavior.&lt;/p&gt;
+&lt;p&gt;Even though properties are the Pythonic way to go, they can have some practical drawbacks. Because of this, you’ll find some situations where getters and setters are preferable over properties.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In this tutorial, you’ll:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Write &lt;strong&gt;getter&lt;/strong&gt; and &lt;strong&gt;setter&lt;/strong&gt; methods in your classes&lt;/li&gt;
+&lt;li&gt;Replace getter and setter methods with &lt;strong&gt;properties&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Explore &lt;strong&gt;other tools&lt;/strong&gt; to replace getter and setter methods in Python&lt;/li&gt;
+&lt;li&gt;Decide when &lt;strong&gt;setter&lt;/strong&gt; and &lt;strong&gt;getter&lt;/strong&gt; methods can be the &lt;strong&gt;right tool for the job&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To get the most out of this tutorial, you should be familiar with Python &lt;a href=&quot;https://realpython.com/python3-object-oriented-programming/&quot;&gt;object-oriented&lt;/a&gt; programming. It’ll also be a plus if you have basic knowledge of Python &lt;a href=&quot;https://realpython.com/python-property/&quot;&gt;properties&lt;/a&gt; and &lt;a href=&quot;https://realpython.com/python-descriptors/&quot;&gt;descriptors&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong markdown=&quot;1&quot;&gt;Source Code:&lt;/strong&gt; &lt;a href=&quot;https://realpython.com/bonus/python-getter-setter-code/&quot; class=&quot;alert-link&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-python-getter-setter-code&quot; data-focus=&quot;false&quot; markdown=&quot;1&quot;&gt;Click here to get the free source code&lt;/a&gt; that shows you how and when to use getters, setters, and properties in Python.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;getting-to-know-getter-and-setter-methods&quot;&gt;Getting to Know Getter and Setter Methods&lt;a class=&quot;headerlink&quot; href=&quot;#getting-to-know-getter-and-setter-methods&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;When you define a class in object-oriented programming (OOP), you’ll likely end up with some instance and class &lt;a href=&quot;https://realpython.com/python3-object-oriented-programming/#class-and-instance-attributes&quot;&gt;attributes&lt;/a&gt;. These attributes are just &lt;a href=&quot;https://realpython.com/python-variables/&quot;&gt;variables&lt;/a&gt; that you can access through the instance, the class, or both.&lt;/p&gt;
+&lt;p&gt;Attributes hold the internal &lt;a href=&quot;https://en.wikipedia.org/wiki/State_(computer_science)&quot;&gt;state&lt;/a&gt; of objects. In many cases, you’ll need to access and mutate this state, which involves accessing and mutating the attributes. Typically, you’ll have at least two ways to access and mutate attributes. You can either:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Access and mutate the attribute &lt;strong&gt;directly&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Use &lt;strong&gt;methods&lt;/strong&gt; to access and mutate the attribute&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If you expose the attributes of a class to your users, then those attributes automatically become part of the class’s public &lt;a href=&quot;https://en.wikipedia.org/wiki/API&quot;&gt;API&lt;/a&gt;. They’ll be &lt;strong&gt;public attributes&lt;/strong&gt;, which means that your users will directly access and mutate the attributes in their code.&lt;/p&gt;
+&lt;p&gt;Having an attribute that’s part of a class’s API will become a problem if you need to change the internal implementation of the attribute itself. A clear example of this issue is when you want to turn a &lt;strong&gt;stored&lt;/strong&gt; attribute into a &lt;strong&gt;computed&lt;/strong&gt; one. A stored attribute will immediately respond to access and mutation operations by just retrieving and storing data, while a computed attribute will run computations before such operations.&lt;/p&gt;
+&lt;p&gt;The problem with regular attributes is that they can’t have an &lt;em&gt;internal implementation&lt;/em&gt; because they’re just variables. So, changing an attribute’s internal implementation will require converting the attribute into a method, which will probably break your users’ code. Why? Because they’ll have to change attribute access and mutation operations into method calls throughout their codebase if they want the code to continue working.&lt;/p&gt;
+&lt;p&gt;To deal with this kind of issue, some programming languages, like Java and C++, require you to provide methods for manipulating the attributes of your classes. These methods are commonly known as &lt;strong&gt;getter&lt;/strong&gt; and &lt;strong&gt;setter&lt;/strong&gt; methods. You can also find them referred to as &lt;a href=&quot;https://en.wikipedia.org/wiki/Accessor_method&quot;&gt;accessor&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Mutator_method&quot;&gt;mutator&lt;/a&gt; methods.&lt;/p&gt;
+&lt;h3 id=&quot;what-are-getter-and-setter-methods&quot;&gt;What Are Getter and Setter Methods?&lt;a class=&quot;headerlink&quot; href=&quot;#what-are-getter-and-setter-methods&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Getter and setter methods are quite popular in many object-oriented programming languages. So, it’s pretty likely that you’ve heard about them already. As a rough definition, you can say that getters and setters are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Getter:&lt;/strong&gt; A method that allows you to &lt;em&gt;access&lt;/em&gt; an attribute in a given class&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Setter:&lt;/strong&gt; A method that allows you to &lt;em&gt;set&lt;/em&gt; or &lt;em&gt;mutate&lt;/em&gt; the value of an attribute in a class&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In OOP, the getter and setter pattern suggests that public attributes should be used only when you’re sure that no one will ever need to attach behavior to them. If an attribute is likely to change its internal implementation, then you should use getter and setter methods.&lt;/p&gt;
+&lt;p&gt;Implementing the getter and setter pattern requires:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Making your attributes non-public&lt;/li&gt;
+&lt;li&gt;Writing getter and setter methods for each attribute&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For example, say that you need to write a &lt;code&gt;Label&lt;/code&gt; class with text and font attributes. If you were to use getter and setter methods to manage these attributes, then you’d write the class like in the following code:&lt;/p&gt;
+&lt;div class=&quot;highlight python&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# label.py&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;fm&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_font&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;font&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;get_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_text&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;set_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;get_font&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_font&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;set_font&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_font&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In this example, the constructor of &lt;code&gt;Label&lt;/code&gt; takes two arguments, &lt;code&gt;text&lt;/code&gt; and &lt;code&gt;font&lt;/code&gt;. These arguments are stored in the &lt;code&gt;._text&lt;/code&gt; and &lt;code&gt;._font&lt;/code&gt; non-public instance attributes, respectively.&lt;/p&gt;
+&lt;p&gt;Then you define getter and setter methods for both attributes. Typically, getter methods return the target attribute’s value, while setter methods take a new value and assign it to the underlying attribute.&lt;/p&gt;
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Python doesn’t have the notion of &lt;a href=&quot;https://en.wikipedia.org/wiki/Access_modifiers&quot;&gt;access modifiers&lt;/a&gt;, such as &lt;code&gt;private&lt;/code&gt;, &lt;code&gt;protected&lt;/code&gt;, and &lt;code&gt;public&lt;/code&gt;, to restrict access to attributes and methods in a class. In Python, the distinction is between &lt;strong&gt;public&lt;/strong&gt; and &lt;strong&gt;non-public&lt;/strong&gt; class members.&lt;/p&gt;
+&lt;p&gt;If you want to signal that a given attribute or method is non-public, then you should use the well-established Python &lt;a href=&quot;https://www.python.org/dev/peps/pep-0008/#method-names-and-instance-variables&quot;&gt;convention&lt;/a&gt; of prefixing the name with an underscore (&lt;code&gt;_&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Note that this is just a convention. It doesn’t stop you and other programmers from accessing the attributes using &lt;strong&gt;dot notation&lt;/strong&gt;, as in &lt;code&gt;obj._attr&lt;/code&gt;. However, it’s bad practice to violate this convention.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2&gt;&lt;a href=&quot;https://realpython.com/python-getter-setter/?utm_source=realpython&amp;utm_medium=rss&quot;&gt;Read the full article at https://realpython.com/python-getter-setter/ »&lt;/a&gt;&lt;/h2&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Refactoring: Prepare Your Code to Get Help</title>
+      <id>https://realpython.com/courses/refactoring-code-to-get-help/</id>
+      <link href="https://realpython.com/courses/refactoring-code-to-get-help/"/>
+      <updated>2022-11-08T14:00:00+00:00</updated>
+      <summary>In this Code Conversation video course, you&#x27;ll explore the steps you can take to get help when you&#x27;re stuck while coding. You&#x27;ll investigate how to clean up your code to focus on the question you have. Along the way, you&#x27;ll learn how to handle errors and use custom exceptions.</summary>
+      <content type="html">
+        &lt;p&gt;At some point in your Python journey, you&amp;rsquo;ll look to other programmers for help with a sticking point in your code. When that day comes, it&amp;rsquo;s important to make sure that you&amp;rsquo;re asking a &lt;strong&gt;clear question&lt;/strong&gt; and that the code is &lt;strong&gt;accessible&lt;/strong&gt; and &lt;strong&gt;executable&lt;/strong&gt;. If you can make it easier for people to help you out, then you&amp;rsquo;re more likely to get the answers that you need.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In this video course, you&amp;rsquo;ll learn how to:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Write a clear, concise question using &lt;strong&gt;how&lt;/strong&gt; or &lt;strong&gt;why&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;strong&gt;obstacles&lt;/strong&gt; and &lt;strong&gt;visual clutter&lt;/strong&gt; from your code&lt;/li&gt;
+&lt;li&gt;Improve your code by &lt;strong&gt;refactoring&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Raise and catch &lt;strong&gt;exceptions&lt;/strong&gt; within nested functions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You&amp;rsquo;ll get insight from two Real Python team members in this Code Conversation. To connect with fellow programmers and have your own code conversations, you can join the &lt;a href=&quot;https://realpython.com/community/&quot;&gt;Real Python community&lt;/a&gt;.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Python News: What&#x27;s New From October 2022</title>
+      <id>https://realpython.com/python-news-october-2022/</id>
+      <link href="https://realpython.com/python-news-october-2022/"/>
+      <updated>2022-11-07T14:00:00+00:00</updated>
+      <summary>In October 2022, the final release of Python 3.11 saw the light of day after initial hiccups. A few popular Python libraries and frameworks also published their new versions, including early preview versions meant for testing. Apart from that, some exciting events happened in the Python community.</summary>
+      <content type="html">
+        &lt;div&gt;&lt;p&gt;As always, October was an eventful month for the Python community this year. It brought the final &lt;strong&gt;Python 3.11&lt;/strong&gt; release, a few beta versions of the next major releases of popular Python libraries, and some exciting developments in the Python community.&lt;/p&gt;
+&lt;p&gt;Here’s a quick recap of the most interesting happenings from &lt;strong&gt;October 2022&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong markdown=&quot;1&quot;&gt;Free Download:&lt;/strong&gt; &lt;a href=&quot;https://realpython.com/bonus/python-311-examples/&quot; class=&quot;alert-link&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-python-311-examples&quot; data-focus=&quot;false&quot; markdown=&quot;1&quot;&gt;Click here to download free sample code&lt;/a&gt; that demonstrates some of the new features of Python 3.11.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;the-python-311-release&quot;&gt;The Python 3.11 Release&lt;a class=&quot;headerlink&quot; href=&quot;#the-python-311-release&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;By far, this month’s most exciting event was the release of Python 3.11, overshadowing a few other interesting news items. October was chosen for the annual Python releases a few years ago, giving a stable and predictable release cycle for Python.&lt;/p&gt;
+&lt;p&gt;The release date of Python 3.11 was originally planned for October 3. Unfortunately, it was delayed due to &lt;a href=&quot;https://mail.python.org/archives/list/python-dev@python.org/thread/TKFELC4AXKSYMJXCZNZYE7O5OR7ZGTXH/&quot;&gt;unexpected problems&lt;/a&gt; that were blocking the previous release candidate about a month before. The world had to wait an additional three weeks, until &lt;strong&gt;October 24&lt;/strong&gt;, to finally witness the next major Python release:&lt;/p&gt;
+&lt;figure class=&quot;js-lightbox&quot;&gt;&lt;a href=&quot;https://files.realpython.com/media/py37doc.19331064ea7e.png&quot; target=&quot;_blank&quot;&gt;&lt;img loading=&quot;lazy&quot; class=&quot;img-fluid mx-auto d-block border &quot; src=&quot;https://files.realpython.com/media/py37doc.19331064ea7e.png&quot; width=&quot;1905&quot; height=&quot;1080&quot; srcset=&quot;https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/py37doc.19331064ea7e.png&amp;amp;w=476&amp;amp;sig=74b022c5ff01fadc2c8eb0a7a23a5326586eec36 476w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/py37doc.19331064ea7e.png&amp;amp;w=952&amp;amp;sig=356211255f3b42c050fe49a0c0344d13e619aefc 952w, https://files.realpython.com/media/py37doc.19331064ea7e.png 1905w&quot; sizes=&quot;75vw&quot; alt=&quot;Python 3.11 Documentation&quot; data-asset=&quot;4712&quot;&gt;&lt;/a&gt;&lt;figcaption class=&quot;figure-caption text-center&quot;&gt;Python 3.11 Documentation&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;This version packs many new features and promises significant performance improvements, an effort that’ll continue in future versions to achieve even better results. The &lt;a href=&quot;https://docs.python.org/3.11/whatsnew/3.11.html&quot;&gt;What’s New In Python 3.11&lt;/a&gt; article gives an overview of what has changed since the previous version of the language. The &lt;a href=&quot;https://docs.python.org/3/whatsnew/changelog.html#python-3-11-0-final&quot;&gt;Python 3.11 changelog&lt;/a&gt; provides more details with links to the individual GitHub issues and their corresponding code commits.&lt;/p&gt;
+&lt;p&gt;In short, these are arguably the most worthwhile new features in Python 3.11:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://realpython.com/python311-error-messages/&quot;&gt;Even Better Error Messages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://realpython.com/python311-exception-groups/&quot;&gt;Asynchronous Task and Exception Groups&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://realpython.com/python311-tomllib/&quot;&gt;TOML and tomllib&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://realpython.com/python311-new-features/#improved-type-variables&quot;&gt;Type Checking Enhancements&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://realpython.com/python311-new-features/#faster-startup&quot;&gt;Faster Startup&lt;/a&gt; and &lt;a href=&quot;https://realpython.com/python311-new-features/#faster-code-execution&quot;&gt;Code Execution&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://realpython.com/python311-new-features/#zero-cost-exceptions&quot;&gt;Zero-Cost Exceptions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To dive deeper and have a hands-on experience with Python 3.11, head over to our &lt;a href=&quot;https://realpython.com/python311-new-features/&quot;&gt;dedicated tutorial&lt;/a&gt; or &lt;a href=&quot;https://realpython.com/courses/new-features-python-311/&quot;&gt;video course&lt;/a&gt; about the new features, where you can make your way through the most important language improvements with code examples.&lt;/p&gt;
+&lt;p&gt;Even though Python 3.11 has just been released, it’s going to be a while before companies and cloud service providers start using it in production on a larger scale. Upgrading the runtime environment is always risky and can lead to downtime, data loss, or other unforeseen problems. That’s precisely why the US army &lt;a href=&quot;https://www.wearethemighty.com/mighty-trending/us-military-old-windows-software/&quot;&gt;refuses to upgrade&lt;/a&gt; their old-school software on mission-critical equipment.&lt;/p&gt;
+&lt;p&gt;At the same time, it’s worth mentioning that some major Python libraries, especially those in the data science field, began supporting Python 3.11 and tested it thoroughly before the official release. This ensures that users can make a safe switch to Python 3.11 and start taking advantage of the new language features without having to wait for their package dependencies to catch up.&lt;/p&gt;
+&lt;p&gt;What’s your favorite new feature in Python 3.11?&lt;/p&gt;
+&lt;h2 id=&quot;updates-from-the-python-ecosystem&quot;&gt;Updates From the Python Ecosystem&lt;a class=&quot;headerlink&quot; href=&quot;#updates-from-the-python-ecosystem&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The Python ecosystem keeps moving forward with new releases each month. The &lt;strong&gt;pytest 7.2.0&lt;/strong&gt; release is now available, and &lt;strong&gt;SQLAlchemy 2.0&lt;/strong&gt; has finally been released in the beta version. The &lt;strong&gt;NetworkX&lt;/strong&gt; library has also released a beta version of its next major version.&lt;/p&gt;
+&lt;h3 id=&quot;pytest-720&quot;&gt;pytest 7.2.0&lt;a class=&quot;headerlink&quot; href=&quot;#pytest-720&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In late October, the open-source community released a new minor release of &lt;a href=&quot;https://realpython.com/pytest-python-testing/&quot;&gt;pytest&lt;/a&gt;, one of the most widespread testing libraries in Python. This version brings a few quality-of-life improvements.&lt;/p&gt;
+&lt;/div&gt;&lt;h2&gt;&lt;a href=&quot;https://realpython.com/python-news-october-2022/?utm_source=realpython&amp;utm_medium=rss&quot;&gt;Read the full article at https://realpython.com/python-news-october-2022/ »&lt;/a&gt;&lt;/h2&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>The Real Python Podcast – Episode #131: Exploring the New Features of Python 3.11</title>
+      <id>https://realpython.com/podcasts/rpp/131/</id>
+      <link href="https://realpython.com/podcasts/rpp/131/"/>
+      <updated>2022-11-04T12:00:00+00:00</updated>
+      <summary>Python 3.11 is here! Our regular guests, Geir Arne Hjelle and Christopher Trudeau, return to talk about the new version. Geir Arne wrote a series of preview tutorials earlier this year, and his annual piece, titled &quot;Python 3.11: Cool New Features for You to Try,&quot; was published on October 24. Christopher&#x27;s video course came out the next day, covering the topics from the tutorial with visual examples of Python 3.11 in action.</summary>
+      <content type="html">
+        &lt;p&gt;Python 3.11 is here! Our regular guests, Geir Arne Hjelle and Christopher Trudeau, return to talk about the new version. Geir Arne wrote a series of preview tutorials earlier this year, and his annual piece, titled &quot;Python 3.11: Cool New Features for You to Try,&quot; was published on October 24. Christopher&#x27;s video course came out the next day, covering the topics from the tutorial with visual examples of Python 3.11 in action.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Should You Update to the Latest Python Bugfix Version?</title>
+      <id>https://realpython.com/python-bugfix-version/</id>
+      <link href="https://realpython.com/python-bugfix-version/"/>
+      <updated>2022-11-02T14:00:00+00:00</updated>
+      <summary>What&#x27;s the significance of the third digit in a Python version number? In this tutorial, you&#x27;ll learn more about Python bugfix versions and whether you need to care about them.</summary>
+      <content type="html">
+        &lt;div&gt;&lt;p&gt;If you’ve been hanging out in the Python community for a while, you may remember discussions about Python 2 vs Python 3, or you may have seen versions like &lt;a href=&quot;https://realpython.com/python310-new-features/&quot;&gt;Python 3.10&lt;/a&gt; and &lt;a href=&quot;https://realpython.com/python311-new-features/&quot;&gt;Python 3.11&lt;/a&gt; released with some &lt;a href=&quot;https://realpython.com/python-news-october-2021/#a-live-python-310-release-party-on-youtube&quot;&gt;fanfare&lt;/a&gt;. You may have noticed that Python versions have three numbers—for example, 3.10.8. In this tutorial, you’ll focus on &lt;strong&gt;Python bugfix versions&lt;/strong&gt; and the importance of that &lt;strong&gt;third number&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;For any developer, designing a &lt;strong&gt;versioning scheme&lt;/strong&gt; and interpreting the corresponding version numbers is its own little art form. Some of the most popular systems are &lt;a href=&quot;https://calver.org/&quot;&gt;calendar versioning&lt;/a&gt; and &lt;a href=&quot;https://semver.org/&quot;&gt;semantic versioning&lt;/a&gt;. Python’s versioning scheme resembles semantic versioning, but with some crucial differences.&lt;/p&gt;
+&lt;p&gt;Typically, a version number is given as a tuple of three numbers, often referred to as MAJOR.MINOR.PATCH. The interpretation of the three numbers depends on your versioning scheme:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;MAJOR&lt;/strong&gt; is the most important number. In calendar versioning, this is often the year of a release. Semantic versioning schemes introduce new major versions when there are backward-incompatible changes. Python last updated its major version when &lt;a href=&quot;https://docs.python.org/3/whatsnew/3.0.html&quot;&gt;Python 3 was released&lt;/a&gt; in 2008, and there are currently no concrete plans to release a major version 4 of Python.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;MINOR&lt;/strong&gt; is the second version number. This number keeps track of regular releases that offer some new functionality while remaining compatible with the previous version. In Python, a MINOR release is usually called a &lt;strong&gt;feature release&lt;/strong&gt; and &lt;a href=&quot;https://peps.python.org/pep-0387/&quot;&gt;may remove&lt;/a&gt; deprecated features. The Python community releases a new feature version &lt;a href=&quot;https://peps.python.org/pep-0602/&quot;&gt;annually&lt;/a&gt;, typically in October.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;PATCH&lt;/strong&gt; is the third and least significant number. It’s sometimes named MICRO instead. Versions that only differ in their PATCH numbers will typically have the same functionality. In Python, a PATCH release is often called a &lt;strong&gt;bugfix release&lt;/strong&gt;, a &lt;strong&gt;maintenance release&lt;/strong&gt;, or a &lt;strong&gt;security fix release&lt;/strong&gt;. As the names suggest, these versions will only introduce bug or security fixes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In Python, these numbers follow a fairly strict schedule. Each feature, or MINOR, release of Python goes through the same life cycle:&lt;/p&gt;
+&lt;figure class=&quot;js-lightbox&quot;&gt;&lt;a href=&quot;https://files.realpython.com/media/release-life-cycle.d27a9c29d461.png&quot; target=&quot;_blank&quot;&gt;&lt;img loading=&quot;lazy&quot; class=&quot;img-fluid mx-auto d-block &quot; src=&quot;https://files.realpython.com/media/release-life-cycle.d27a9c29d461.png&quot; width=&quot;2880&quot; height=&quot;616&quot; srcset=&quot;https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/release-life-cycle.d27a9c29d461.png&amp;amp;w=720&amp;amp;sig=8aaded9e9648848ff589ccbf24628e4105ace028 720w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/release-life-cycle.d27a9c29d461.png&amp;amp;w=1440&amp;amp;sig=7da854ffc89ae99810b59521eb083813b6b0d0d3 1440w, https://files.realpython.com/media/release-life-cycle.d27a9c29d461.png 2880w&quot; sizes=&quot;75vw&quot; alt=&quot;The life cycle of Python feature releases&quot; data-asset=&quot;4681&quot;&gt;&lt;/a&gt;&lt;figcaption class=&quot;figure-caption text-center&quot;&gt;Python feature release life cycle&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;The diagram shows the life cycles of Python 3.11, 3.12, and 3.13. The PATCH numbers track where in its cycle a version currently is. Development starts about seventeen months before the release date:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;New features&lt;/strong&gt; are developed during the first twelve months and are released in &lt;strong&gt;alpha&lt;/strong&gt; versions.&lt;/li&gt;
+&lt;li&gt;The version is thoroughly &lt;strong&gt;tested and prepared for release&lt;/strong&gt; in the next five months. &lt;strong&gt;Beta&lt;/strong&gt; and &lt;strong&gt;release candidate&lt;/strong&gt; versions are published during this time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bugfix releases&lt;/strong&gt; are published regularly for eighteen months after the feature release.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Security fix releases&lt;/strong&gt; are published as needed until five years after the feature release.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The alpha, beta, and release candidate versions are collectively known as &lt;a href=&quot;https://realpython.com/python-pre-release/&quot;&gt;pre-release versions&lt;/a&gt;. For each feature release, these are made available during the development and testing phases. You should start testing your code on these early versions, but you shouldn’t run essential services on them.&lt;/p&gt;
+&lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong markdown=&quot;1&quot;&gt;Free Download:&lt;/strong&gt; &lt;a href=&quot;https://realpython.com/bonus/python-311-examples/&quot; class=&quot;alert-link&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-python-311-examples&quot; data-focus=&quot;false&quot; markdown=&quot;1&quot;&gt;Click here to download free sample code&lt;/a&gt; that demonstrates some of the new features of Python 3.11.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;In this tutorial, you’ll focus on the bugfix and security fix release versions. While new feature releases of Python get some buzz because they introduce new features to the language, the difference between, for example, 3.11.0 and 3.11.1 may be harder to spot. &lt;strong&gt;Should you update to the latest bugfix version of Python?&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;in-short-yes-especially-in-vulnerable-production-systems&quot;&gt;In Short: Yes, Especially in Vulnerable Production Systems&lt;a class=&quot;headerlink&quot; href=&quot;#in-short-yes-especially-in-vulnerable-production-systems&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Keeping up to date with the latest maintenance version of the Python feature release that you’re using is a good idea!&lt;/p&gt;
+&lt;p&gt;In specific contexts and use cases, it’s even more critical. As in all large software systems, there are &lt;a href=&quot;https://github.com/python/cpython/issues?q=is%3Aissue+is%3Aopen+label%3Atype-bug&quot;&gt;bugs in Python&lt;/a&gt;. Few of these will affect you, but from time to time, a vulnerability is discovered and fixed. If you deal with &lt;strong&gt;sensitive data&lt;/strong&gt; or a system &lt;strong&gt;exposed to users&lt;/strong&gt; who may have evil intentions, then you must keep up with the latest bugfix version to protect yourself and your users.&lt;/p&gt;
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You don’t need to keep up with the latest feature release of Python to be safe. All versions of Python are supported for five years and receive security fixes during that period.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;If you don’t update to the latest maintenance version, then you’re not missing any new features of Python. Those are all added in feature releases. So, the main question you should consider is how exposed and vulnerable your system is. If your system is potentially open to an attack that could have severe consequences, then you need a process to ensure that your environment is as robust as possible.&lt;/p&gt;
+&lt;p&gt;You should manage your project through an automated &lt;a href=&quot;https://realpython.com/python-continuous-integration/&quot;&gt;continuous integration&lt;/a&gt; system that’ll run tests on all your updates. To be alerted about new bugfix releases of Python, you can follow &lt;em&gt;release&lt;/em&gt; posts on &lt;a href=&quot;https://discuss.python.org/tag/release&quot;&gt;Python Discourse&lt;/a&gt; or subscribe to the &lt;a href=&quot;https://mail.python.org/archives/list/python-announce-list@python.org/&quot;&gt;Python announce mailing list&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Bugfix releases will only contain bug and security fixes. You most likely won’t experience any difference between two versions of the same feature release. If you’re not hitting any lurking Python bugs and not touching the outside world when running your code, it’s less urgent to always use the latest maintenance version.&lt;/p&gt;
+&lt;/div&gt;&lt;h2&gt;&lt;a href=&quot;https://realpython.com/python-bugfix-version/?utm_source=realpython&amp;utm_medium=rss&quot;&gt;Read the full article at https://realpython.com/python-bugfix-version/ »&lt;/a&gt;&lt;/h2&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Python Basics: Scopes</title>
+      <id>https://realpython.com/courses/python-basics-scopes/</id>
+      <link href="https://realpython.com/courses/python-basics-scopes/"/>
+      <updated>2022-11-01T14:00:00+00:00</updated>
+      <summary>In this video course, you&#x27;ll learn what scope is and why it&#x27;s important to coding functions and loops in Python. You&#x27;ll also get to know the LEGB rule.</summary>
+      <content type="html">
+        &lt;p&gt;On your Python journey, you&amp;rsquo;ve probably learned about &lt;a href=&quot;https://realpython.com/courses/python-basics-functions-loops/&quot;&gt;functions and loops&lt;/a&gt;. To fully understand functions and loops in Python, you need to be familiar with the issue of scope.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;By the end of this video course, you&amp;rsquo;ll know:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What a &lt;strong&gt;scope&lt;/strong&gt; is and why it&amp;rsquo;s important &lt;/li&gt;
+&lt;li&gt;How Python applies the &lt;strong&gt;LEGB rule&lt;/strong&gt; for scope resolution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Scope can be one of the more difficult programming concepts to understand, so in this video course, you&amp;rsquo;ll get a gentle introduction to it.&lt;/p&gt;
+&lt;p&gt;This video course is part of the Python Basics series, which accompanies &lt;a href=&quot;https://realpython.com/products/python-basics-book/&quot;&gt;&lt;em&gt;Python Basics: A Practical Introduction to Python 3&lt;/em&gt;&lt;/a&gt;. You can also check out the other &lt;a href=&quot;https://realpython.com/learning-paths/python-basics/&quot;&gt;Python Basics courses&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Note that you&amp;rsquo;ll be using &lt;a href=&quot;https://realpython.com/python-idle/&quot;&gt;IDLE&lt;/a&gt; to &lt;a href=&quot;https://realpython.com/interacting-with-python/&quot;&gt;interact with Python&lt;/a&gt; throughout this course. If you&amp;rsquo;re just getting started, then you might want to check out &lt;a href=&quot;https://realpython.com/courses/setting-up-python/&quot;&gt;Python Basics: Setting Up Python&lt;/a&gt; before diving into this course.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Python&#x27;s doctest: Document and Test Your Code at Once</title>
+      <id>https://realpython.com/python-doctest/</id>
+      <link href="https://realpython.com/python-doctest/"/>
+      <updated>2022-10-31T14:00:00+00:00</updated>
+      <summary>In this tutorial, you&#x27;ll learn how to add usage examples to your code&#x27;s documentation and docstrings and how to use these examples to test your code. To run your usage examples as automated tests, you&#x27;ll use Python&#x27;s doctest module from the standard library.</summary>
+      <content type="html">
+        &lt;div&gt;&lt;p&gt;Are you interested in writing usage examples for your code that work as &lt;strong&gt;documentation&lt;/strong&gt; and &lt;strong&gt;test cases&lt;/strong&gt; simultaneously? If your answer is &lt;em&gt;yes&lt;/em&gt;, then Python’s &lt;code&gt;doctest&lt;/code&gt; module is for you. This module provides a testing framework that doesn’t have too steep a learning curve. It’ll allow you to use code examples for two purposes: documenting and testing your code.&lt;/p&gt;
+&lt;p&gt;Apart from allowing you to use your code’s documentation for testing the code itself, &lt;code&gt;doctest&lt;/code&gt; will help you keep your code and its documentation in perfect sync at any moment.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In this tutorial, you’ll:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Write &lt;strong&gt;&lt;code&gt;doctest&lt;/code&gt; tests&lt;/strong&gt; in your code’s documentation and docstrings&lt;/li&gt;
+&lt;li&gt;Understand how &lt;strong&gt;&lt;code&gt;doctest&lt;/code&gt; works&lt;/strong&gt; internally&lt;/li&gt;
+&lt;li&gt;Explore the &lt;strong&gt;limitations&lt;/strong&gt; and &lt;strong&gt;security implications&lt;/strong&gt; of &lt;code&gt;doctest&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;doctest&lt;/code&gt; for &lt;strong&gt;test-driven development&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Run your &lt;code&gt;doctest&lt;/code&gt; tests using different &lt;strong&gt;strategies and tools&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You won’t have to install any third-party libraries or learn complex APIs to follow this tutorial. You only need to know the basics of Python programming and how to use the Python &lt;a href=&quot;https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop&quot;&gt;REPL&lt;/a&gt; or &lt;a href=&quot;https://realpython.com/interacting-with-python/&quot;&gt;interactive shell&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
+&lt;p&gt;&lt;strong markdown=&quot;1&quot;&gt;Sample Code:&lt;/strong&gt; &lt;a href=&quot;https://realpython.com/bonus/python-doctest-code/&quot; class=&quot;alert-link&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-python-doctest-code&quot; data-focus=&quot;false&quot; markdown=&quot;1&quot;&gt;Click here to download the free sample code&lt;/a&gt; that you’ll use to simultaneously document and test your code with Python’s &lt;code&gt;doctest&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;documenting-your-code-with-examples-and-tests&quot;&gt;Documenting Your Code With Examples and Tests&lt;a class=&quot;headerlink&quot; href=&quot;#documenting-your-code-with-examples-and-tests&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Almost all experienced programmers will tell you that &lt;a href=&quot;https://realpython.com/documenting-python-code/&quot;&gt;documenting&lt;/a&gt; your code is a best practice. Some will say that code and its documentation are equally important and necessary. Others will tell you that documentation is even more important than the code itself.&lt;/p&gt;
+&lt;p&gt;In Python, you’ll find many ways to document a project, app, or even modules and scripts. Larger projects generally require dedicated external documentation. But in small projects, using &lt;strong&gt;explicit names&lt;/strong&gt;, &lt;a href=&quot;https://realpython.com/python-comments-guide/&quot;&gt;comments&lt;/a&gt;, and &lt;strong&gt;docstrings&lt;/strong&gt; might be sufficient:&lt;/p&gt;
+&lt;div class=&quot;highlight python&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&quot;linenos&quot;&gt; 1&lt;/span&gt;&lt;span class=&quot;sd&quot;&gt;&quot;&quot;&quot;This module implements functions to process iterables.&quot;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;linenos&quot;&gt; 2&lt;/span&gt;
+&lt;span class=&quot;linenos&quot;&gt; 3&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;find_value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iterable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+&lt;span class=&quot;linenos&quot;&gt; 4&lt;/span&gt;    &lt;span class=&quot;sd&quot;&gt;&quot;&quot;&quot;Return True if value is in iterable, False otherwise.&quot;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;linenos&quot;&gt; 5&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# Be explicit by using iteration instead of membership&lt;/span&gt;
+&lt;span class=&quot;linenos&quot;&gt; 6&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iterable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;linenos&quot;&gt; 7&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Find the target value by equality&lt;/span&gt;
+&lt;span class=&quot;linenos&quot;&gt; 8&lt;/span&gt;            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;True&lt;/span&gt;
+&lt;span class=&quot;linenos&quot;&gt; 9&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Explicit names like &lt;code&gt;find_value()&lt;/code&gt; help you clearly express the content and aim of a given object. Such names improve your code’s readability and maintainability.&lt;/p&gt;
+&lt;p&gt;Comments, like the ones on lines 5 and 7, are pieces of text that you insert at different places in your code to clarify what the code does and why. Note that a Python comment starts with a &lt;code&gt;#&lt;/code&gt; symbol and can occupy its own line or be part of an existing line.&lt;/p&gt;
+&lt;p&gt;Comments have a couple of drawbacks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;They’re ignored by the interpreter or compiler, which makes them &lt;strong&gt;unreachable at runtime&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;They often get &lt;strong&gt;outdated&lt;/strong&gt; when the code evolves and the comments remain untouched.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Documentation strings, or simply &lt;a href=&quot;https://realpython.com/python-project-documentation-with-mkdocs/#step-3-write-and-format-your-docstrings&quot;&gt;docstrings&lt;/a&gt;, are a neat Python feature that can help you document your code as you go. The advantage of docstrings compared to comments is that the interpreter doesn’t ignore them. They’re a living part of your code.&lt;/p&gt;
+&lt;p&gt;Because docstrings are active parts of your code, you can access them at runtime. To do this, you can use the &lt;code&gt;.__doc__&lt;/code&gt; special attributes on your &lt;a href=&quot;https://realpython.com/python-modules-packages/&quot;&gt;packages, modules&lt;/a&gt;, &lt;a href=&quot;https://realpython.com/python3-object-oriented-programming/#define-a-class-in-python&quot;&gt;classes&lt;/a&gt;, methods, and &lt;a href=&quot;https://realpython.com/defining-your-own-python-function/&quot;&gt;functions&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Tools like &lt;a href=&quot;https://realpython.com/python-project-documentation-with-mkdocs/&quot;&gt;MkDocs&lt;/a&gt; and &lt;a href=&quot;https://www.sphinx-doc.org/en/master/&quot;&gt;Sphinx&lt;/a&gt; can take advantage of docstrings for generating project documentation automatically.&lt;/p&gt;
+&lt;p&gt;You can add docstrings to your packages, modules, classes, methods, and functions in Python. If you want to learn how to write good docstrings, then &lt;a href=&quot;https://peps.python.org/pep-0257/&quot;&gt;PEP 257&lt;/a&gt; proposes a series of conventions and recommendations that you can follow.&lt;/p&gt;
+&lt;p&gt;When you write docstrings, a common practice is to embed &lt;strong&gt;usage examples&lt;/strong&gt; for your code. Those examples typically simulate REPL sessions.&lt;/p&gt;
+&lt;p&gt;Embedding code examples in your docstrings provides an effective way to document the code and a quick way to test the code as you write it. Yes, your code examples can work as test cases if you write them in a proper manner and use the right tool to run them.&lt;/p&gt;
+&lt;p&gt;Embedding REPL-like code examples in your code helps you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Keep the documentation in &lt;strong&gt;sync&lt;/strong&gt; with the current state of your code&lt;/li&gt;
+&lt;li&gt;Express your code’s &lt;strong&gt;intended usage&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Test&lt;/strong&gt; your code as you write it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Those benefits sound neat! Now, how can you run the code examples that you’ve embedded in your documentation and docstrings? You can use Python’s &lt;a href=&quot;https://docs.python.org/3/library/doctest.html#module-doctest&quot;&gt;&lt;code&gt;doctest&lt;/code&gt;&lt;/a&gt; module from the &lt;a href=&quot;https://docs.python.org/3/library/index.html&quot;&gt;standard library&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;getting-to-know-pythons-doctest-module&quot;&gt;Getting to Know Python’s &lt;code&gt;doctest&lt;/code&gt; Module&lt;a class=&quot;headerlink&quot; href=&quot;#getting-to-know-pythons-doctest-module&quot; title=&quot;Permanent link&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In this section, you’ll get to know Python’s &lt;a href=&quot;https://docs.python.org/3/library/doctest.html#module-doctest&quot;&gt;&lt;code&gt;doctest&lt;/code&gt;&lt;/a&gt; module. This module is part of the standard library, so you don’t have to install any third-party library to be able to use it in your day-to-day coding. Among other things, you’ll learn what &lt;code&gt;doctest&lt;/code&gt; is and when to use this neat Python tool. To kick things off, you’ll start by diving into what &lt;code&gt;doctest&lt;/code&gt; is.&lt;/p&gt;
+&lt;/div&gt;&lt;h2&gt;&lt;a href=&quot;https://realpython.com/python-doctest/?utm_source=realpython&amp;utm_medium=rss&quot;&gt;Read the full article at https://realpython.com/python-doctest/ »&lt;/a&gt;&lt;/h2&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Cool New Features in Python 3.11</title>
+      <id>https://realpython.com/courses/new-features-python-311/</id>
+      <link href="https://realpython.com/courses/new-features-python-311/"/>
+      <updated>2022-10-25T14:00:00+00:00</updated>
+      <summary>In this video course, you&#x27;ll explore what Python 3.11 brings to the table. You&#x27;ll learn how Python 3.11 is the fastest and most user-friendly version of CPython yet, and learn about improvements to the typing system and to the asynchronous features of Python.</summary>
+      <content type="html">
+        &lt;p&gt;Python 3.11 was published on &lt;a href=&quot;https://peps.python.org/pep-0664/&quot;&gt;October 24, 2022&lt;/a&gt;. This latest version of Python is faster and more user-friendly. After seventeen months of development, it&amp;rsquo;s now ready for production.&lt;/p&gt;
+&lt;p&gt;As in every version, Python 3.11 comes with lots of improvements and changes. You can see a list of all of them in the &lt;a href=&quot;https://docs.python.org/3.11/whatsnew/3.11.html&quot;&gt;documentation&lt;/a&gt;. Here, you&amp;rsquo;ll explore the coolest and most impactful new features.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In this video course, you&amp;rsquo;ll learn about new features and improvements like:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Better &lt;strong&gt;error messages&lt;/strong&gt; with more informative tracebacks&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Faster code execution&lt;/strong&gt; due to many efforts in the &lt;strong&gt;Faster CPython&lt;/strong&gt; project&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Task and Exception groups&lt;/strong&gt; that simplify working with asynchronous code&lt;/li&gt;
+&lt;li&gt;Several new typing features improving Python&amp;rsquo;s &lt;strong&gt;static typing support&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Native &lt;strong&gt;TOML support&lt;/strong&gt; for working with configuration files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you want to try any of the examples in this video course, you&amp;rsquo;ll need to use Python 3.11. &lt;a href=&quot;https://realpython.com/installing-python/&quot;&gt;Python 3 Installation &amp;amp; Setup Guide&lt;/a&gt; and &lt;a href=&quot;https://realpython.com/python-pre-release/&quot;&gt;How Can You Install a Pre-Release Version of Python?&lt;/a&gt; walk you through several options for adding a new version of Python to your system.&lt;/p&gt;
+&lt;p&gt;As you learn more about the new features coming to the language, you&amp;rsquo;ll also get some advice about which things you should consider before upgrading to the new version.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>The Real Python Podcast – Episode #130: Fostering an Internal Python Community &amp; Managing the 3.11 Release</title>
+      <id>https://realpython.com/podcasts/rpp/130/</id>
+      <link href="https://realpython.com/podcasts/rpp/130/"/>
+      <updated>2022-10-21T12:00:00+00:00</updated>
+      <summary>Does your company have a plan for growing an internal Python community? What are the attributes to look for when bringing someone into your department? This week on the show, Pablo Galindo Salgado returns to talk about building community through the Python Guild at Bloomberg and managing the release of Python 3.11.</summary>
+      <content type="html">
+        &lt;p&gt;Does your company have a plan for growing an internal Python community? What are the attributes to look for when bringing someone into your department? This week on the show, Pablo Galindo Salgado returns to talk about building community through the Python Guild at Bloomberg and managing the release of Python 3.11.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Python Basics: Numbers and Math</title>
+      <id>https://realpython.com/courses/python-basics-numbers-and-math/</id>
+      <link href="https://realpython.com/courses/python-basics-numbers-and-math/"/>
+      <updated>2022-10-18T14:00:00+00:00</updated>
+      <summary>In this video course, you&#x27;ll learn the math that you&#x27;ll need for your Python programming journey. This includes integers and floating-point numbers, arithmetic operators, and string formatting for numbers.</summary>
+      <content type="html">
+        &lt;p&gt;You don&amp;rsquo;t need to be a math whiz to program well. The truth is, few
+programmers need to know more than basic algebra.&lt;/p&gt;
+&lt;p&gt;Of course, how much math you need to know depends on the 
+application you&amp;rsquo;re working on. In general, the level of math required 
+to be a programmer is lower than you might expect.&lt;/p&gt;
+&lt;p&gt;Although math and computer programming aren&amp;rsquo;t as correlated as 
+some people might believe, numbers are an integral part of any 
+programming language, and Python is no exception.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In this video course, you&amp;rsquo;ll learn how to:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create &lt;strong&gt;integers&lt;/strong&gt; and &lt;strong&gt;floating-point&lt;/strong&gt; numbers&lt;/li&gt;
+&lt;li&gt;Use &lt;strong&gt;arithmetic expressions&lt;/strong&gt;, &lt;strong&gt;math functions&lt;/strong&gt;, and &lt;strong&gt;number methods&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Format and display numbers in &lt;strong&gt;strings&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Create &lt;strong&gt;complex numbers&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This video course is part of the Python Basics series, which accompanies &lt;a href=&quot;https://realpython.com/products/python-basics-book/&quot;&gt;&lt;em&gt;Python Basics: A Practical Introduction to Python 3&lt;/em&gt;&lt;/a&gt;. You can also check out the other &lt;a href=&quot;https://realpython.com/learning-paths/python-basics/&quot;&gt;Python Basics courses&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Note that you&amp;rsquo;ll be using &lt;a href=&quot;https://realpython.com/python-idle/&quot;&gt;IDLE&lt;/a&gt; to &lt;a href=&quot;https://realpython.com/interacting-with-python/&quot;&gt;interact with Python&lt;/a&gt; throughout this course. If you&amp;rsquo;re just getting started, then you might want to check out &lt;a href=&quot;https://realpython.com/courses/setting-up-python/&quot;&gt;Python Basics: Setting Up Python&lt;/a&gt; before diving into this course.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>The Real Python Podcast – Episode #129: Using an Ellipsis in Python &amp; Goals for CPython 3.12</title>
+      <id>https://realpython.com/podcasts/rpp/129/</id>
+      <link href="https://realpython.com/podcasts/rpp/129/"/>
+      <updated>2022-10-14T12:00:00+00:00</updated>
+      <summary>Where should you use an ellipsis in Python? How does it behave as a placeholder in a script, project, or stub file? What are the next goals for the Faster CPython project? This week on the show, Christopher Trudeau is here, bringing another batch of PyCoder&#x27;s Weekly articles and projects.</summary>
+      <content type="html">
+        &lt;p&gt;Where should you use an ellipsis in Python? How does it behave as a placeholder in a script, project, or stub file? What are the next goals for the Faster CPython project? This week on the show, Christopher Trudeau is here, bringing another batch of PyCoder&#x27;s Weekly articles and projects.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Providing Multiple Constructors in Your Python Classes</title>
+      <id>https://realpython.com/courses/multiple-constructors-python/</id>
+      <link href="https://realpython.com/courses/multiple-constructors-python/"/>
+      <updated>2022-10-11T14:00:00+00:00</updated>
+      <summary>In this video course, you&#x27;ll learn how to provide multiple constructors in your Python classes. To this end, you&#x27;ll learn different techniques, such as checking argument types, using default argument values, writing class methods, and implementing single-dispatch methods.</summary>
+      <content type="html">
+        &lt;p&gt;Sometimes you need to write a Python class that provides multiple ways to construct objects. In other words, you want a class that implements &lt;strong&gt;multiple constructors&lt;/strong&gt;. This kind of class comes in handy when you need to create instances using different types or numbers of arguments. Having the tools to provide multiple constructors will help you write flexible classes that can adapt to changing needs.&lt;/p&gt;
+&lt;p&gt;Python offers several techniques and tools that you can use to construct classes, including simulating multiple constructors through optional arguments, customizing instance creation via class methods, and doing special dispatch with decorators. If you want to learn about these techniques and tools, then this video course is for you.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In this video course, you&amp;rsquo;ll learn how to:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;optional arguments&lt;/strong&gt; and &lt;strong&gt;type checking&lt;/strong&gt; to simulate multiple constructors&lt;/li&gt;
+&lt;li&gt;Write multiple constructors using the built-in &lt;strong&gt;&lt;code&gt;@classmethod&lt;/code&gt;&lt;/strong&gt; decorator&lt;/li&gt;
+&lt;li&gt;Overload your class constructors using the &lt;strong&gt;&lt;code&gt;@singledispatchmethod&lt;/code&gt;&lt;/strong&gt; decorator&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You&amp;rsquo;ll also get a peek under the hood at how Python internally &lt;strong&gt;constructs instances&lt;/strong&gt; of a regular class and how some &lt;strong&gt;standard-library classes&lt;/strong&gt; provide multiple constructors.&lt;/p&gt;
+&lt;p&gt;To get the most out of this video course, you should have basic knowledge of &lt;a href=&quot;https://realpython.com/python3-object-oriented-programming/&quot;&gt;object-oriented programming&lt;/a&gt; and understand how to define &lt;a href=&quot;https://realpython.com/instance-class-and-static-methods-demystified/&quot;&gt;class methods&lt;/a&gt; with &lt;code&gt;@classmethod&lt;/code&gt;. You should also have experience working with &lt;a href=&quot;https://realpython.com/primer-on-python-decorators/&quot;&gt;decorators&lt;/a&gt; in Python.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>The Real Python Podcast – Episode #128: Using a Memory Profiler in Python &amp; What It Can Teach You</title>
+      <id>https://realpython.com/podcasts/rpp/128/</id>
+      <link href="https://realpython.com/podcasts/rpp/128/"/>
+      <updated>2022-10-07T12:00:00+00:00</updated>
+      <summary>Have you used a memory profiler to gauge the performance of your Python application? Maybe you&#x27;re using it to troubleshoot memory issues when loading a large data science project. What could running a profiler show you about a codebase you&#x27;re learning? This week on the show, Pablo Galindo Salgado returns to talk about Memray, a powerful tracing memory profiler.</summary>
+      <content type="html">
+        &lt;p&gt;Have you used a memory profiler to gauge the performance of your Python application? Maybe you&#x27;re using it to troubleshoot memory issues when loading a large data science project. What could running a profiler show you about a codebase you&#x27;re learning? This week on the show, Pablo Galindo Salgado returns to talk about Memray, a powerful tracing memory profiler.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Python Basics: Strings and String Methods</title>
+      <id>https://realpython.com/courses/python-basics-strings-string-methods/</id>
+      <link href="https://realpython.com/courses/python-basics-strings-string-methods/"/>
+      <updated>2022-10-04T14:00:00+00:00</updated>
+      <summary>In Python, collections of text are called strings. In this course, you&#x27;ll learn about this fundamental data type and the string methods that you can use to manipulate strings. Along the way, you&#x27;ll learn ways to work with strings of numbers, and how to format strings for printing.</summary>
+      <content type="html">
+        &lt;p&gt;Many programmers, regardless of their specialty, deal with text on a
+daily basis. For example, web developers work with text input from
+web forms. Data scientists process text to extract data and perform
+tasks like sentiment analysis, which can help identify and classify
+opinions in a body of text.&lt;/p&gt;
+&lt;p&gt;Collections of text in Python are called &lt;strong&gt;strings&lt;/strong&gt;. Special functions
+called &lt;strong&gt;string methods&lt;/strong&gt; are used to manipulate strings. There are
+string methods for changing a string from lowercase to uppercase, 
+removing whitespace from the beginning or end of a string, replacing
+parts of a string with different text, and much more.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In this video course, you&amp;rsquo;ll learn how to:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Manipulate strings with &lt;strong&gt;string methods&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Work with &lt;strong&gt;user input&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Deal with strings of &lt;strong&gt;numbers&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Format&lt;/strong&gt; strings for printing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This video course is part of the Python Basics series, which accompanies &lt;a href=&quot;https://realpython.com/products/python-basics-book/&quot;&gt;&lt;em&gt;Python Basics: A Practical Introduction to Python 3&lt;/em&gt;&lt;/a&gt;. You can also check out the other &lt;a href=&quot;https://realpython.com/learning-paths/python-basics/&quot;&gt;Python Basics courses&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Note that you&amp;rsquo;ll be using &lt;a href=&quot;https://realpython.com/python-idle/&quot;&gt;IDLE&lt;/a&gt; to &lt;a href=&quot;https://realpython.com/interacting-with-python/&quot;&gt;interact with Python&lt;/a&gt; throughout this course.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>The Real Python Podcast – Episode #127: Explaining Access Control Using Python &amp; Cautiously Handling Pickles</title>
+      <id>https://realpython.com/podcasts/rpp/127/</id>
+      <link href="https://realpython.com/podcasts/rpp/127/"/>
+      <updated>2022-09-30T12:00:00+00:00</updated>
+      <summary>Have you ever used code to help explain a topic? How can Python scripts be used to understand the intricacies of access control? This week on the show, Christopher Trudeau is here, bringing another batch of PyCoder&#x27;s Weekly articles and projects.</summary>
+      <content type="html">
+        &lt;p&gt;Have you ever used code to help explain a topic? How can Python scripts be used to understand the intricacies of access control? This week on the show, Christopher Trudeau is here, bringing another batch of PyCoder&#x27;s Weekly articles and projects.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>Sneaky REST APIs With Django Ninja</title>
+      <id>https://realpython.com/courses/rest-apis-with-django-ninja/</id>
+      <link href="https://realpython.com/courses/rest-apis-with-django-ninja/"/>
+      <updated>2022-09-27T13:00:00+00:00</updated>
+      <summary>In this video course, you&#x27;ll learn how to use Django Ninja, a FastAPI-inspired tool for turning Django views in REST API endpoints. With Ninja, you can quickly build API endpoints.</summary>
+      <content type="html">
+        &lt;p&gt;Many web projects have moved to the single-page application model. To use this model with Django, you build a project where Django is the back end accessed through a REST API. The &lt;a href=&quot;https://django-ninja.rest-framework.com/&quot;&gt;Django Ninja&lt;/a&gt; library is a FastAPI-inspired tool kit for turning Django views into REST API endpoints with very little extra code. Along the way, you&amp;rsquo;ll be using &lt;a href=&quot;https://curl.se/&quot;&gt;&lt;code&gt;curl&lt;/code&gt;&lt;/a&gt;, a command-line tool that allows you to grab the contents of a web page. &lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;d like to quickly build API endpoints and learn the ways of the Ninja, you&amp;rsquo;re in the right place.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In this course, you&amp;rsquo;ll learn about:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;REST APIs&lt;/li&gt;
+&lt;li&gt;Django Ninja&lt;/li&gt;
+&lt;li&gt;URL arguments and query strings&lt;/li&gt;
+&lt;li&gt;Serialization through &lt;code&gt;Schema&lt;/code&gt; and &lt;code&gt;ModelSchema&lt;/code&gt; classes&lt;/li&gt;
+&lt;li&gt;CRUD operations&lt;/li&gt;
+&lt;li&gt;Authentication&lt;/li&gt;
+&lt;li&gt;Error management&lt;/li&gt;
+&lt;/ul&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>The Real Python Podcast – Episode #126: Python as an Efficiency Tool for Non-Developers</title>
+      <id>https://realpython.com/podcasts/rpp/126/</id>
+      <link href="https://realpython.com/podcasts/rpp/126/"/>
+      <updated>2022-09-23T12:00:00+00:00</updated>
+      <summary>Are you interested in using Python in an industry outside of software development? Would adding a few custom software tools increase efficiency and make your coworkers&#x27; jobs easier? This week on the show, Josh Burnett talks about using Python as a mechanical engineer.</summary>
+      <content type="html">
+        &lt;p&gt;Are you interested in using Python in an industry outside of software development? Would adding a few custom software tools increase efficiency and make your coworkers&#x27; jobs easier? This week on the show, Josh Burnett talks about using Python as a mechanical engineer.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+    <entry>
+      <title>The Real Python Podcast – Episode #125: Improve Matplotlib With Style Sheets &amp; Python Async for the Web</title>
+      <id>https://realpython.com/podcasts/rpp/125/</id>
+      <link href="https://realpython.com/podcasts/rpp/125/"/>
+      <updated>2022-09-16T12:00:00+00:00</updated>
+      <summary>Have you thought the standard output from Matplotlib is a bit generic looking? Would you like a quick way to add style and consistency to your data visualizations? This week on the show, Christopher Trudeau is here, bringing another batch of PyCoder&#x27;s Weekly articles and projects.</summary>
+      <content type="html">
+        &lt;p&gt;Have you thought the standard output from Matplotlib is a bit generic looking? Would you like a quick way to add style and consistency to your data visualizations? This week on the show, Christopher Trudeau is here, bringing another batch of PyCoder&#x27;s Weekly articles and projects.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;&lt;em&gt;[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp;amp; sweet Python Trick delivered to your inbox every couple of days. &lt;a href=&quot;https://realpython.com/python-tricks/?utm_source=realpython&amp;amp;utm_medium=rss&amp;amp;utm_campaign=footer&quot;&gt;&amp;gt;&amp;gt; Click here to learn more and see examples&lt;/a&gt; ]&lt;/em&gt;&lt;/p&gt;
+      </content>
+    </entry>
+  
+
+</feed>
