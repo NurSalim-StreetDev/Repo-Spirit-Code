@@ -1,12 +1,68 @@
-<!--Open Preview Web-->
 <html>
     <head>
         <title>WEB Belajar Islam</title>
+        <style>
+            /* CSS untuk mengatur tampilan tabel */
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: left;
+                vertical-align: top; /* Memastikan teks sejajar di atas */
+            }
+            .rowspan-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%; /* Memastikan container memenuhi tinggi rowspan */
+            }
+            .rowspan-container span {
+                display: block;
+                text-align: center;
+                padding: 10px 0; /* Memberikan jarak vertikal antara nomor */
+            }
+        </style>
     </head>
     <body>
         <h1>Daftar Isi</h1>
-        <p><a href = "UNPAS-1.html">Halaman 1. WEB Belajar Adab Islam</a></p>
-        <p><a href = "UNPAS-2.html">Halaman 2. WEB Belajar Rukun Islam</a></p>
-        <p><a href = "UNPAS-3.html">Halaman 3. WEB Langkah-Langkah Wudhu</a></p>
+        <p><a href="UNPAS-1.html">Halaman 1. WEB Belajar Adab Islam</a></p>
+        <p><a href="UNPAS-2.html">Halaman 2. WEB Belajar Rukun Islam</a></p>
+        <p><a href="UNPAS-3.html">Halaman 3. WEB Langkah-Langkah Wudhu</a></p>
+        
+        <h2>Materi Islami</h2>
+        <table border="1">
+            <tr>
+                <th>No</th>
+                <th>Materi</th>
+                <th>Deskripsi</th>
+            </tr>
+            <tr>
+                <td rowspan="4">
+                    <div class="rowspan-container">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                    </div>
+                </td>
+                <td>Keutamaan Shalat</td>
+                <td>Shalat adalah tiang agama dan merupakan ibadah wajib bagi setiap Muslim.</td>
+            </tr>
+            <tr>
+                <td>Pentingnya Sedekah</td>
+                <td>Sedekah membersihkan harta dan membantu mereka yang membutuhkan.</td>
+            </tr>
+            <tr>
+                <td>Adab dalam Berbicara</td>
+                <td>Seorang Muslim harus berbicara dengan santun, jujur, dan tidak menyakiti orang lain.</td>
+            </tr>
+            <tr>
+                <td>Pentingnya Membaca Al-Qur'an</td>
+                <td>Membaca Al-Qur'an mendatangkan pahala dan petunjuk dalam kehidupan.</td>
+            </tr>
+        </table>
     </body>
 </html>

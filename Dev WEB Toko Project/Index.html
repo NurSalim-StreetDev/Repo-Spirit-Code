@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Saya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Toko Saya</h1>
+        <p>Toko kami menyediakan berbagai produk berkualitas dengan harga terjangkau.</p>
+    </header>
+
+    <section id="produk">
+        <h2>Daftar Produk</h2>
+        <div class="produk-list">
+            <div class="produk-item">
+                <img src="Image/Dompet.jpg" alt="Produk 1">
+                <h3>Produk 1</h3>
+                <p>Rp 50.000</p>
+            </div>
+            <div class="produk-item">
+                <img src="Image/Sepatu.jpg" alt="Produk 2">
+                <h3>Produk 2</h3>
+                <p>Rp 75.000</p>
+            </div>
+            <div class="produk-item">
+                <img src="Image/Tas.jpg" alt="Produk 3">
+                <h3>Produk 3</h3>
+                <p>Rp 100.000</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak">
+        <h2>Hubungi Kami</h2>
+        <form id="form-kontak">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="pesan">Pesan:</label>
+            <textarea id="pesan" name="pesan" rows="5" required></textarea>
+
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Toko Saya. Semua hak dilindungi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -16,4 +16,4 @@ hero3 = Hero('Mage', 20, 75, 0)
 
 print (hero1.__dict__)
 print (hero2.__dict__)
-print (hero3.__dict__)
+print (hero3.__dict__)(((((((())))))))((()))
